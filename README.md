@@ -1,6 +1,6 @@
 # Status
 
-http://build.fhir.org/ig/JohnMoehrke/ITI.aIPS/branches/main/index.html
+[CI Build](http://build.fhir.org/ig/IHE/ITI.aIPS/branches/master/index.html)
 
 ## Background
 
