@@ -2,12 +2,12 @@
 # ───────────────────────────────────────────────────
 # the id should be lowercase made up of "ihe." + {domain acronym} + "." + {profile acronym/short-name}
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
-id: ihe.domain.profile
-canonical: https://profiles.ihe.net/Domain/Profile
+id: ihe.iti.aips
+canonical: https://profiles.ihe.net/ITI/aIPS
 version: 0.0.1-current
-name: IHE_Domain_Profile
-title: "spelled out name of the IHE Profile"
-description: put the short description of the profile here. it should explain what problem is being solved
+name: IHE_ITI_aIPS
+title: "Accessibility of IPS"
+description: Accessibility of IPS (aIPS) - defines how HL7 FHIR IPS is communicated using IHE Document Sharing
 releaseLabel: ci-build
 #releaseLabel: Trial-Implementation
 #date: 2022-01-02
@@ -26,8 +26,12 @@ license:  CC-BY-4.0
 fhirVersion: 4.0.1
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 #copyright: IHE http://www.ihe.net/Governance/#Intellectual_Property
-copyrightYear: 2021+
+copyrightYear: 2023+
 
+dependencies:
+  hl7.fhir.uv.ips:
+    uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
+    version: current
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
@@ -60,12 +64,6 @@ pages:
   volume-1.md:
     title: 1:XX. ToDo Volume 1
     generation: markdown
-  domain-YY.md:
-    title: 2:3.YY Transaction one [Domain-YY]
-    generation: markdown
-  domain-ZZ.md:
-    title: 3:?.ZZ Content one [Domain-ZZ]
-    generation: markdown
   testplan.md:
     title: "Test Plan"
     generation: markdown
@@ -89,10 +87,6 @@ menu:
     Overview: volume-1.html#overview
     Security Considerations: volume-1.html#security-considerations
     Cross-Profile Considerations: volume-1.html#other-grouping
-  Volume 2:
-    "Transaction one [Domain-YY]": domain-YY.html
-  Volume 3:
-    "Content one [Domain-ZZ]": domain-ZZ.html
   Artifacts: artifacts.html
   Other:
     Test Plan: testplan.html

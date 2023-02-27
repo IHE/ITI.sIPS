@@ -1,7 +1,5 @@
 
-**This Implementation Guide template includes skeleton pages for each part of an IHE supplement. The instructions for how to fill out these sections can be found in the included [Supplement Template](https://github.com/IHE/supplement-template/blob/master/suppl_template.md). This supplement template should not be included in your github repo or publication. It is included here for easy reference.**
-
-**TODO: Write your executive overview here. Usually a one paragraph explanation of what problem this implementation guide solves.**
+Accessibility of IPS (aIPS) - defines how HL7 [FHIR IPS](http://hl7.org/fhir/uv/ips/) is communicated using IHE [Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
 <div markdown="1" class="stu-note">
 
@@ -21,18 +19,10 @@ This guide is organized into the following sections:
    1. [Overview](volume-1.html#overview)
    1. [Security Considerations](volume-1.html#security-considerations)
    1. [Cross Profile Considerations](volume-1.html#other-grouping)
-   1. **TODO: point to the Volume 1 Appendix if there is one**
-2. Volume 2: Transaction Detail
-   1. [ToDo do \[domain-YY\]](domain-YY.html)
-   1. **TODO: point to the Volume 2 Appendix if there is one**
-3. Volume 3: Metadata and Content
-   1. [Content One](domain-ZZ.html)
-4. Volume 4: National Extensions
-   1. **TODO: point at the National Extensions if there are any**
-6. Other
+2. Other
    1. [Test Plan](testplan.html)
-   1. [Changes to Other IHE Specifications](other.html)
-   1. [Download and Analysis](download.html) 
+   2. [Changes to Other IHE Specifications](other.html)
+   3. [Download and Analysis](download.html)
 
 See also the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
 
