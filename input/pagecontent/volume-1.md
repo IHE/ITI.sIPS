@@ -10,12 +10,12 @@ Given that HL7 has published an [International Patient Summary, which is a FHIR-
 - [Content Creator](#creator)
 - [Content Consumer](#consumer)
 
-<div>
+<figure>
 {%include docSharing.svg%}
-</div>
+<figcaption><b>Figure: aIPS Actor Diagram</b></figcaption>
+</figure>
 <br clear="all">
 
-**Figure: aIPS Actor Diagram**
 
 ### XX.1.1 Actors
 The actors in this profile are described in more detail in the sections below.
