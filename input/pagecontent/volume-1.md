@@ -116,7 +116,7 @@ The Concepts of the [HL7 International Patient Summary (IPS)](http://hl7.org/fhi
 
 ### XX.4.2.1 Publishing IPS
 
-```Cucumber
+```Gherkin
 Given that the HL7 FHIR IPS Implementation Guide provides a Medical Summary in FHIR format
 And that IHE Document Sharing is a recognized document sharing infrastructure
 When a FHIR IPS is published
@@ -124,9 +124,11 @@ And there is a need to make it discoverable
 Then I need to have clear specification on how I express in Document Sharing the existence of a FHIR IPS sources
 ```
 
+Note: the above use-case is written in [Gherkin](https://cucumber.io/docs/gherkin/), a use-case language optimized for automated testing.
+
 ### XX.4.2.2  Making On-Demand access to IPS available
 
-```Cucumber
+```Gherkin
 Given that the HL7 FHIR IPS Implementation Guide provides a Medical Summary in FHIR format
 And that IHE Document Sharing is a recognized document sharing infrastructure
 When an FHIR IPS could be made available on-demand
@@ -136,7 +138,7 @@ Then I need to have clear specification on how I express in Document Sharing the
 
 ### XX.4.2.3  Retrieving an IPS
 
-```Cucumber
+```Gherkin
 Given that the HL7 FHIR IPS Implementation Guide provides a Medical Summary in FHIR format
 And that IHE Document Sharing is a recognized document sharing infrastructure
 When an application needs access to a FHIR IPS
@@ -145,7 +147,7 @@ Then I need to have clear specification on how I use Document Sharing to find FH
 
 ### XX.4.2.4  Pushing and IPS to a recipient
 
-```Cucumber
+```Gherkin
 Given that the HL7 FHIR IPS Implementation Guide provides a Medical Summary in FHIR format
 And that IHE Document Sharing is a recognized document sharing infrastructure
 When an FHIR IPS needs to be sent to a specific recipient
