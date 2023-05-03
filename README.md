@@ -1,9 +1,22 @@
 # Status
 
-[CI Build](http://build.fhir.org/ig/IHE/ITI.aIPS/branches/master/index.html)
+approved work item starting spring 2023
 
 [ITI New Work Item Proposal](https://github.com/IHE/IT-Infrastructure/issues/197)
-- This has NOT yet been accepted as a new work item
+
+## CI Build
+
+[CI Build](http://build.fhir.org/ig/IHE/ITI.aIPS/branches/master/index.html)
+
+## ITI bi-weekly development call
+
+ITI meets for one hour every other week to develop this work toward Public-Comment, toward Trial-Implementation publication. Target for Public-Comment is Summer 2023, thus first Trial-Implementation publication in Fall 2023. Depending on the scope attempted
+
+- bi-weekly - Thursday @ 9amCT/10amET/1600CET
+- Starting June 8, 2023
+- [teams meeting](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDUyNmZlYWYtODMwMi00NzFiLTg0NGMtN2UwYTVhMjZkZThj%40thread.v2/0?context=%7b%22Tid%22%3a%2202a9376b-a4f9-4a63-a240-52c43ebf9a89%22%2c%22Oid%22%3a%226459fea4-110a-4d17-85f0-00587211a0c0%22%7d)
+
+Best to [join the ITI-Technical committee](https://www.ihe.net/ihe_domains/it_infrastructure/), but I am interested in diverse perspectives from anyone.
 
 ## Background
 
