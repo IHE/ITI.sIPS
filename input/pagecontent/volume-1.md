@@ -16,7 +16,6 @@ Given that HL7 has published an [International Patient Summary, which is a FHIR-
 </figure>
 <br clear="all">
 
-
 ### XX.1.1 Actors
 The actors in this profile are described in more detail in the sections below.
 
@@ -89,9 +88,9 @@ TF-2:3.1.4 for more details on this option.
 
 The Content Creator and Content Consumer communicate the content using the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
-The Content Creator shall be grouped with a Document Source actor from one of the Document Sharing Implementation Guides (e.g. XDS, XDM, XDR, MHD, etc).
+The Content Creator shall be grouped with a Document Source actor from one of the Document Sharing Implementation Guides (e.g. XDS, XCA, XDM, XDR, MHD, MHDS, etc).
 
-The Content Consumer shall be grouped with a Document Consumer actor from one of the Document Sharing Implementation Guides (e.g. XDS, XDM, XDR, MHD, etc).
+The Content Consumer shall be grouped with a Document Consumer actor from one of the Document Sharing Implementation Guides (e.g. XDS, XCA, XDM, XDR, MHD, MHDS, etc).
 
 Document Sharing [Health Information Exchange Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) includes additional HIE functionalities that are covered in the following sections:
 - [Document Sharing: Profiles](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#3-document-sharing-profiles)

@@ -38,7 +38,10 @@ It is possible that this IG could/should mention the:
 - MHD Generate Metadata
 - MHD ITI-65 FHIR documents Publish
 - IHE-DSG for document digital signatures
+- IHE-DEN for document encryuption
 - Include some examples
+- Describe patient mediated
+- mention the possibility of use with 360x
 
 I don't know that mentioning these is useful or necessary as they already exist in the HL7 / IHE specifications.
 

@@ -1,11 +1,4 @@
 
-<div markdown="1" class="dragon">
-
-This is an experimental IG.
-
-</div>
-<br clear="all">
-
 Accessibility of IPS (aIPS) - defines how HL7 [FHIR IPS](http://hl7.org/fhir/uv/ips/) is communicated using IHE [Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
 <div markdown="1" class="stu-note">
