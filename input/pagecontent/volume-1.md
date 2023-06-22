@@ -3,6 +3,10 @@
 
 Given that HL7 has published an [International Patient Summary, which is a FHIR-Document](http://hl7.org/fhir/uv/ips/), this Implementation Guide defines how to communicate and access the IPS using [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). This is an IHE Content Module as defined in the IHE Technical Frameworks [General Introduction](https://profiles.ihe.net/GeneralIntro/). This Implementation Guide does not further refine the IPS, and thus any document conforming to the HL7 base IPS specification is applicable here.
 
+TODO:introduce the above a bit more, and and explain the relationship with the PCC-IPS (aka future plans for the content in the PCC-IPS).
+
+TODO: Explain why we are focused on the FHIR flavor of IPS as market demand. Explain that there is a CDA flavor that is not in scope of this IG.
+
 ## 1:56.1 aIPS Actors, Transactions, and Content Modules
 
 <a name="actors-and-transactions"> </a>
