@@ -27,11 +27,11 @@ fhirVersion: 4.0.1
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 #copyright: IHE http://www.ihe.net/Governance/#Intellectual_Property
 copyrightYear: 2023+
-extension: 
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    valueCode: draft
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 0
+#extension: 
+#  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+#    valueCode: draft
+#  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+#    valueInteger: 0
     
 dependencies:
   hl7.fhir.uv.ips:
@@ -64,10 +64,13 @@ resources:
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: 1:56. aIPS Home
+    title: 1:56 aIPS Home
     generation: markdown
   volume-1.md:
-    title: 1:56. aIPS Volume 1
+    title: 1:56 aIPS Volume 1
+    generation: markdown
+  content.md:
+    title: 3:5.9 IPS Content Module
     generation: markdown
   testplan.md:
     title: "Test Plan"
@@ -81,6 +84,9 @@ pages:
   issues.md:
     title: Significant Changes & Issues
     generation: markdown
+  pcc.md:
+    title: PCC Volume 2 excerpt
+    generation: markdown
 
 menu:
   Home: index.html
@@ -92,8 +98,10 @@ menu:
     Overview: volume-1.html#overview
     Security Considerations: volume-1.html#security-considerations
     Cross-Profile Considerations: volume-1.html#other-grouping
+  Volume 3: content.html
   Artifacts: artifacts.html
   Other:
     Test Plan: testplan.html
     Changes to Other IHE Specifications: other.html
     Download and Analysis: download.html
+  PCC Excerpt: pcc.html

@@ -18,6 +18,15 @@ ITI meets for one hour every other week to develop this work toward Public-Comme
 
 Best to [join the ITI-Technical committee](https://www.ihe.net/ihe_domains/it_infrastructure/), but I am interested in diverse perspectives from anyone.
 
+## Active development
+
+- bringing in Volume 3 profiling of IPS to show metadata mapping following ITI Content Module template
+- bring in excerpt from PCC Volume 2 to show 
+  - what Content Creator/Content Consumer define and how they link to Document Sharing actors
+    - SHOULD I DO THIS? it has no FHIR-Document specifics, but it seems our reader will like to see this in html form
+  - include detailed metadata mapping tables, which incorporates CP-PCC-0300
+- somehow include an onDemand section. Likely link to the IPS concept of $summary.
+
 ## Background
 
 This IG will cover minimally how the HL7 FHIR "IPS" IG compliant document is shared using the IHE Document Sharing infrastructure. This would leverage many IHE Profiles, and would need to profile very little. At minimum the profiling (constraints) would be a FormatCode vocabulary, and the normal conformance requirements for Content Profile.
@@ -43,20 +52,21 @@ I propose that this focus on the [FHIR-Document encoding of IPS](http://hl7.org/
 
 Given that it is possible we are addressing a new audience. We could express in a bit more detail the above use-cases than we tend to do for a basic Content Profile that simply leverages PCC
 
+On-Demand document concept, especially given IPS is a summary. There is a prime use-case that speaks to this. Will describe overall how this works, and point to the relevant parts of existing specifications.
+
+Include some examples of DocumentReference given an example artifact found in the IPS specification.
+
 ### Additional mentions
 
 It is possible that this IG could/should mention the:
 
 - using XDS association relationships to show that a CDA and IPS are semantically the same content with different encodings
-- On-Demand document concept, especially given IPS is a summary
-- IPS $summary operation, mostly to explain how this mechanism might be hooked to Document Sharing On-Demand document entries
 - IPA $docref operation.
 - MHD Simplified Publish
 - MHD Generate Metadata
 - MHD ITI-65 FHIR documents Publish
 - IHE-DSG for document digital signatures
-- IHE-DEN for document encryuption
-- Include some examples
+- IHE-DEN for document encryption
 - Describe patient mediated
 - mention the possibility of use with 360x
 
@@ -64,7 +74,7 @@ I don't know that mentioning these is useful or necessary as they already exist 
 
 ### Also CPs
 
-Note that there is at least one CP that added FHIR-Document to the PCC Volume 2: 4.1 on how to map document content to document sharing metadata. This added support for FHIR-Document in addition to the CDA mapping that exists. This is very important in addition to something specific about IPS as a FHIR-Document.
+Note that there is [CP-PCC-0300](https://docs.google.com/document/d/1bbA51duSvceEwTLTukNpAy5EYWWG9XSr/edit) that added FHIR-Document to the PCC Volume 2: 4.1 on how to map document content to document sharing metadata. This added support for FHIR-Document in addition to the CDA mapping that exists. This is very important in addition to something specific about IPS as a FHIR-Document.
 
 How many PCC approved CPs are there? The technical framework has not been updated since 2016.
 

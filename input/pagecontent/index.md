@@ -19,10 +19,15 @@ This guide is organized into the following sections:
    1. [Overview](volume-1.html#overview)
    1. [Security Considerations](volume-1.html#security-considerations)
    1. [Cross Profile Considerations](volume-1.html#other-grouping)
-2. Other
+2. Volume 3:
+   1. [IPS Content Module](content.html)
+3. Other
    1. [Test Plan](testplan.html)
    2. [Changes to Other IHE Specifications](other.html)
    3. [Download and Analysis](download.html)
+4. PCC Excerpt
+   1. [Volume 2:3.1 PCC-1](pcc.html)
+   2. [Volume 2:4.1 Metadata Mapping](pcc.html)
 
 See also the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
 
