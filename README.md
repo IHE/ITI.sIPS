@@ -26,6 +26,7 @@ Best to [join the ITI-Technical committee](https://www.ihe.net/ihe_domains/it_in
     - SHOULD I DO THIS? it has no FHIR-Document specifics, but it seems our reader will like to see this in html form
   - include detailed metadata mapping tables, which incorporates CP-PCC-0300
 - somehow include an onDemand section. Likely link to the IPS concept of $summary.
+- Given the many mapping guidance, we will need to be careful to address specific audience. For example the PCC Volume 2 is not useful for an audience that is focused on FHIR IPS and FHIR MHD, and thus might confuse them more than help them.
 
 ## Background
 
@@ -90,3 +91,12 @@ The acronym should be clearly "IPS", but needs to be distinct from the content d
 - IPS Sharing: IPS-S to set a pattern for other document sharing and make the -S the known text for sharing
 - IPS Metadata (IPS-M): This is similar to Document Exchange but is more subtle. -M is probably a bad choice because that is to close to "m" for Mobile.
 - IPS Metadata (IPS Meta): So you can post your IPS on Facebook.
+- Exchanging IPS (eIPS)
+- eXchanging IPS (xIPS)
+
+## Survey
+
+1. Are you creating or consuming IPS?
+2. Are you communicating IPS over IHE Document Sharing (XDS, XCA, XDR, MHD, MHDS)?
+3. Are you aware of a developing IHE-Profile that shows how to communicate IPS over IHE Document Sharing?
+4. 
