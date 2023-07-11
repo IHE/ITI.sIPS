@@ -9,25 +9,27 @@ Accessibility of IPS (aIPS) - defines how HL7 [FHIR IPS](http://hl7.org/fhir/uv/
 </div>
 
 ### Organization of This Guide
+
 This guide is organized into the following sections:
 
-1. Volume 1:
-   1. [Introduction](volume-1.html)
-   1. [Actors, Transactions, and Content](volume-1.html#actors-and-transactions)
-   1. [Actor Options](volume-1.html#actor-options)
-   1. [Actor Required Groupings](volume-1.html#required-groupings)
-   1. [Overview](volume-1.html#overview)
-   1. [Security Considerations](volume-1.html#security-considerations)
-   1. [Cross Profile Considerations](volume-1.html#other-grouping)
-2. Volume 3:
-   1. [IPS Content Module](content.html)
-3. Other
-   1. [Test Plan](testplan.html)
-   2. [Changes to Other IHE Specifications](other.html)
-   3. [Download and Analysis](download.html)
-4. PCC Excerpt
-   1. [Volume 2:3.1 PCC-1](pcc.html)
-   2. [Volume 2:4.1 Metadata Mapping](pcc.html)
+- Volume 1:
+  - [Introduction](volume-1.html)
+  - [Actors, Transactions, and Content](volume-1.html#actors-and-transactions)
+  - [Actor Options](volume-1.html#actor-options)
+  - [Actor Required Groupings](volume-1.html#required-groupings)
+  - [Overview](volume-1.html#overview)
+  - [Security Considerations](volume-1.html#security-considerations)
+  - [Cross Profile Considerations](volume-1.html#other-grouping)
+- Volume 3:
+  - [IPS Content Module](content.html)
+- [Artifacts](artifacts.html)
+- Other
+  - [Test Plan](testplan.html)
+  - [Changes to Other IHE Specifications](other.html)
+  - [Download and Analysis](download.html)
+- PCC Excerpt
+  - [Volume 2:3.1 PCC-1](pcc.html)
+  - [Volume 2:4.1 Metadata Mapping](pcc.html)
 
 See also the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
 
