@@ -1,9 +1,3 @@
-
-|------------------------------------------------|
-| Editor, the following is an excerpt from [PCC Volume 2](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol2.pdf): It is provided here for convenience to the reader and is not intended to be different. It does have CP-PCC-0300 integrated. |
-{:.grid .bg-info}
-
-
 # IHE Transactions 
 
 This section defines each IHE transaction in detail, specifying the
@@ -209,40 +203,67 @@ Composition elements and the XDS DocumentEntry attributes.
 This section describes how the payload used in a transaction of an IHE
 profile is related to and/or constrains the data elements sent or
 received in those transactions. This section is where any specific
-dependencies between the content and metadata / transaction are defined.
+dependencies between the content and transaction are defined.
 
 A content integration profile can define multiple bindings. Each binding
 should identify the transactions and content to which it applies.
 
 The source for all required and optional attributes have been defined in
-the bindings below. Two tables describe the XDS object
-types: XDSDocumentEntry, and XDSSubmissionSet.
-For a mapping between DocumentReferenece and XDS DocumentEntry
-attributes see <http://hl7.org/fhir/documentreference-mappings.html#xds>
+the bindings below. Three tables describe the three main XDS object
+types: XDSDocumentEntry, XDSSubmissionSet, and XDSFolder.
+XDSSubmissionSet and XDSDocumentEntry are required. Use of XDSFolder is
+optional. These concepts are universal to XDS, XDR and XDM.
 
-## Medical Document Binding to Document Sharing Metadata
+The columns of the following tables are:
+
+- **\<XXX\> attribute** – name of an XDS attribute, followed by any
+  discussion of the binding detail.
+
+- **Optional?** - Indicates the required status of the XDS attribute,
+  and is one of R, R2, or O (optional). This column is filled with the
+  values specified in the XDS Profile as a convenience.
+
+- **Source Type** – Will contain one of the following values:
+
+| Source Type | Description                                                                                                                                                                                                                                                                                                                                             |     |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----|
+| SA          | Source document Attribute – value is copied directly from source document. The Source/Value column identifies where in the source document this attribute comes from. Specify the location in XPath when possible.                                                                                                                                      |     |
+| SAT         | Source document Attribute with Transformation – value is copied from source document and transformed. The Source/Value column identifies where in the source document this attribute comes from. Specify the location in XPath when possible. Extended Discussion column must not be empty and the transform must be defined in the extended discussion |     |
+| FM          | Fixed (constant) by Mapping - for all source documents. Source/Value column contains the value to be used in all documents.                                                                                                                                                                                                                             |     |
+| FAD         | Fixed by Affinity Domain – value configured into Affinity Domain, all documents will use this value.                                                                                                                                                                                                                                                    |     |
+| CAD         | Coded in Affinity Domain – a list of acceptable codes are to be configured into Affinity Domain. The value for this attribute shall be taken from this list.                                                                                                                                                                                            |     |
+| CADT        | Coded in Affinity Domain with Transform - a list of acceptable codes are to be configured into Affinity Domain. The value for this attribute shall be taken from this list.                                                                                                                                                                             |     |
+| n/a         | Not Applicable – may be used with an optionality R2 or O attribute to indicate it is not to be used.                                                                                                                                                                                                                                                    |     |
+| DS          | Document Source – value comes from the Document Source Actor. Use Source/Value column or Extended Discussion to give details.                                                                                                                                                                                                                           |     |
+| O           | Other – Extended Discussion must be 'yes' and details given in an Extended Discussion.                                                                                                                                                                                                                                                                  |     |
+
+- **Source/Value** – This column indicates the source or the value used.
+
+The following tables are intended to be summaries of the mapping and
+transforms. The accompanying sections labeled 'Extended Discussion' are
+to contain the details as necessary.
+
+## Medical Document Binding to XDS, XDM and XDR
 
 This binding defines a transformation that generates metadata for the
 XDSDocumentEntry and XDSSubmissionSet elements of appropriate
-transactions from the [Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) profiles given a medical document
+transactions from the XDS, XDM and XDR profiles given a medical document
 and information from other sources. The medical document refers to the
 document being stored in a repository that will be referenced in the
 registry. The other sources of information include the configuration of
 the Document Source Actor, the XDS Affinity Domain, the site or
 facility, local agreements, other documents in the registry/repository,
-and this Content Profile. 
-See [Overview of Health Document Sharing Communities](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#13-overview-of-health-document-sharing-communities)
+and this Content Profile.
 
-In many cases, the CDA/FHIR document is created for the purposes of sharing
-within an XDS Affinity Domain. In these cases the context of the CDA/FHIR Document and
+In many cases, the CDA document is created for the purposes of sharing
+within an XDS Affinity Domain. In these cases the context of the CDA and
 the context of the XDS Affinity Domain are the same, in which case the
 following mappings shall apply.
 
-In other cases, the CDA/FHIR document may have been created for internal use,
-and are subsequently being shared. In these cases the context of the CDA/FHIR
+In other cases, the CDA document may have been created for internal use,
+and are subsequently being shared. In these cases the context of the CDA
 document would not necessarily coincide with that of the XDS Affinity
 Domain, and the mappings below would not necessarily apply.
-See [Principles of IHE for Health Document sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#2-principles-of-ihe-for-health-document-sharing)
 
 Please note the specifics given in the table below.
 
@@ -257,40 +278,40 @@ Please note the specifics given in the table below.
 </colgroup>
 <thead>
 <tr class="header">
-<th>
+<th><blockquote>
 <p><strong>XDSDocumentEntry Attribute</strong></p>
-</th>
-<th>
+</blockquote></th>
+<th><blockquote>
 <p><strong>derivation comment</strong></p>
-</th>
-<th>
+</blockquote></th>
+<th><blockquote>
 <p><strong>FHIR Document</strong></p>
-</th>
-<th>
+</blockquote></th>
+<th><blockquote>
 <p><strong>CDA Document</strong></p>
-</th>
+</blockquote></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>availabilityStatus</p>
-</td>
+</blockquote></td>
 <td></td>
-<td>
+<td><blockquote>
 <p>R NA</p>
-</td>
+</blockquote></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>authorInstitution</p>
-</td>
+</blockquote></td>
 <td></td>
-<td>
+<td><blockquote>
 <p>R2 Composition. author where the Reference is to an Organization</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>$inst &lt;= /ClinicalDocument/author<br />
 /assignedAuthor<br />
 /representedOrganization<br />
@@ -299,18 +320,18 @@ The authorInstitution can be formated<br />
 using the following XPath expression, where $inst in the expression
 below represents the representedOrganization.<br />
 concat($inst/name)</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>authorPerson</p>
-</td>
+</blockquote></td>
 <td></td>
-<td>
+<td><blockquote>
 <p>R2 Composition.author where the Reference is to a Practitioner,
 Device, or Patient</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>$person &lt;= /ClinicalDocument/author<br />
 <br />
 The author can be formatted using the following XPath expression, where
@@ -323,96 +344,96 @@ $person/assignedPerson/name/given[2],"^",<br />
 $person/assignedPerson/name/suffix,"^",<br />
 $person/assignedPerson/name/prefix,"^",<br />
 "^^^&amp;", $person/id/@root,"&amp;ISO")</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>authorRole</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>This metadata element should be based on a mapping of the
 participation function defined in the document to the set of author
 roles configured for the affinity domain.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R2 Composition.author where the Reference is to a
 PractitionerRole</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>If the context of the CDA coincides with that of the affinity domain,
 then the following x-path may be appropriate:<br />
 /ClincicalDocument/author/<br />
 participationFunction</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>authorSpecialty</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>This metadata element should be based on a mapping of the code
 associated with the author to detailed defined classification system for
 healthcare providers such configured in the affinitity domain. Possible
 classifications include those found in SNOMED-CT, or the HIPAA
 Healthcare Provider Taxonomy.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R2 Composition.author where the Reference is a PractitionerRole use
 the PractitionerRole.speciality</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>If the context of the CDA coincides with that of the affinity domain,
 then the following x-path may be appropriate:<br />
 /ClinicalDocument/author/<br />
 assignedAuthor/code</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>classCode</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>Derived from a mapping to an Affinity Domain specified coded value to
 use and coding system. Affinity Domains are encouraged to use the
 appropriate value for Type of Service, based on the LOINC Type of
 Service (see Page 53 of the LOINC User's Manual).</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Must be consistent with Composition.category</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>Must be consistent with /ClinicalDocument/code/@code</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>classCodeDisplayName</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>DisplayName of the classCode derived appropriate Display Name based
 on the Type of Service.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Must be consistent with Composition.category</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>Must be consistent with /ClinicalDocument/code/@code</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>confidentialityCode</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>Derived from a mapping of the document confidentialityCode and other
 security labels to Affinity Domain specified coded values and coding
 system.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Derived from Composition.confidentiality,
 Composition.meta.security</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>/ClinicalDocument/<br />
 confidentialityCode/@code<br />
 -AND/OR-<br />
@@ -421,159 +442,159 @@ consent[<br />
 templateId/@root=<br />
 '1.3.6.1.4.1.19376.1.5.3.1.2.5'<br />
 ] /code/@code</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>comments</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>There is no well-known element in a document to derive a simple
 comment.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>O</p>
-</td>
+</blockquote></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>creationTime</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>Times specified in clinical documents may be specified with a
 precision in fractional sections, and may contain a time zone offset. In
 the XDS Metadata, it can be precise to the second, and is always given
 in UTC, so the timezone offset if present must be added to the current
 time to obtain the UTC time.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Composition.date</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>/ClinicalDocument/effectiveTime</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>entryUUID</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>This element identifies the Document Entry, not the document.</p>
-</td>
+</blockquote></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>eventCodeList</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>These values express a collection of keywords that may be relevant to
 the consumer of the documents in the registry. They may come from
 anywhere in the document, according to its purpose.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>O Composition.event</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>They may come from anywhere in the CDA document, according to its
 purpose.</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>eventCodeDisplayNameList</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>These are the display names for the collection of keywords described
 above.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R(if event<br />
 Code is valued) Composition.event</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>These are the display names for the collection of keywords described
 above.</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>formatCode</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>The format code for each PCC Document content profile is provided
 within the document specifications.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Bundle.meta.profile</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>The format code for each PCC Document content profile is provided
 within the document specifications.</p>
 <p>Usually related to the CDA template id.</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>healthcareFacilityTypeCode</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>A fixed value assigned to the Document Source and configured form a
 set of Affinity Domain defined values. Usually from a mapping to an
 Affinity Domain specific ValueSet.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>May be derived from Composition.author where the Reference is to an
 Organization</p>
 <p>Composition.author where</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>Must be consistent with /clinicalDocument/code</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>healthcareFacility<br />
 TypeCodeDisplay<br />
 Name</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>The display name for the healthcare facility type code indicated
 above.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>May be derived from Composition.author where the Reference is to an
 Organization</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>Must be consistent with /clinicalDocument/code</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>languageCode</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>The human language of the narrative within the document</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Composition.meta. language</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>/ClinicalDocument/languageCode</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>legalAuthenticator</p>
-</td>
+</blockquote></td>
 <td></td>
-<td>
+<td><blockquote>
 <p>O Composition.attester</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>$person &lt;= /ClinicalDocument/<br />
 legalAuthenticator</p>
 <p>The legalAuthenticator can be formatted using the following XPath
@@ -587,212 +608,212 @@ $person/assignedPerson/name/given[2],"^",<br />
 $person/assignedPerson/name/suffix,"^",<br />
 $person/assignedPerson/name/prefix,"^",<br />
 "^^^&amp;", $person/id/@root,"&amp;ISO")</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>mimeType</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>The mime type of the document.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R see <a
 href="http://hl7.org/fhir/http.html#mime-type">http://hl7.org/fhir/http.html#mime-type</a></p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>text/xml</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>patientId</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>The XDS Affinity Domain patient ID can be mapped from the patient
 identity in the document by using transactions from the ITI patient
 identity profiles.</p>
 <p>See sourcePatientId below.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Composition.subject</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>$patID &lt;= /ClinicalDocument/recordTarget/<br />
 patientRole/id</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>practiceSettingCode</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>This elements should be based on an Affinity Domain managed ValueSet
 of coarse classification system for the class of specialty practice.
 Recommend the use of the classification system for Practice Setting,
 such as that described by the Subject Matter Domain in LOINC.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R May be derived from Composition.author where the Reference is to an
 Organization</p>
-</td>
+</blockquote></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>practiceSettingCodeDisplayName</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>This element shall contain the display names associated with the
 codes described above.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R May be derived from Composition.author where the Reference is to an
 Organization</p>
-</td>
+</blockquote></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>serviceStartTime</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>Times specified in clinical documents may be specified with a
 precision in fractional sections, and may contain a time zone offset. In
 the XDS Metadata, it can be precise to the second, and is always given
 in UTC, so the timezone offset if present must be added to the current
 time to obtain the UTC time.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R2 Composition.event.period</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>/ClinicalDocument/documentationOf/<br />
 serviceEvent/effectiveTime/low/<br />
 @value</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>serviceStopTime</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>Times specified in clinical documents may be specified with a
 precision in fractional sections, and may contain a time zone offset. In
 the XDS Metadata, it can be precise to the second, and is always given
 in UTC, so the timezone offset if present must be added to the current
 time to obtain the UTC time.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R2 Composition.event.period</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>/ClinicalDocument/documentationOf/<br />
 serviceEvent/effectiveTime/high/<br />
 @value</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>sourcePatientId</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>This element contains the patient id as is known in the source
 domain.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Composition.subject</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>$patID &lt;= /ClinicalDocument/recordTarget/<br />
 patientRole/id</p>
 <p>The patientId can be formatted using the following XPath expression,
 where $patID in the expression below represents the appropriate
 identifier.<br />
 concat($patID/@extension,"^^^&amp;", $patID/@root, "&amp;ISO")</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>sourcePatientInfo</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>The sourcePatientInfo metadata element can be assembled from various
 components of the patientRole element in the clinical document.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Composition.subject</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>/ClinicalDocument/recordTarget/<br />
 patientRole</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>title</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>/ClinicalDocument/title</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>O Composition.title</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>/ClinicalDocument/title</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>typeCode</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>The typeCode should be mapped to an Affinity Domain managed ValueSet
 of document type codes. One suggested coding system to use for typeCode
 is LOINC, in which case the mapping step can be omitted.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Composition.type</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>/ClinicalDocument/code/@code</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="odd">
-<td>
+<td><blockquote>
 <p>typeCodeDisplay<br />
 Name</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>The display name of the typeCode above.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Composition.type</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>/ClinicalDocument/code/@displayName</p>
-</td>
+</blockquote></td>
 </tr>
 <tr class="even">
-<td>
+<td><blockquote>
 <p>uniqueId</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>The uniqueId is the unique id within the document.</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>R Composition.identifier</p>
-
+</blockquote>
 <p>or</p>
-
+<blockquote>
 <p>Composition.id if no business identifier given</p>
-</td>
-<td>
+</blockquote></td>
+<td><blockquote>
 <p>$docID &lt;= /ClinicalDocument/id</p>
 <p>The uniqueId can be formatted using the following XPath expression,
 where $docID in the expression below represents the identifier.<br />
 concat($docID/@root,"^", $docID/@extension)</p>
-</td>
+</blockquote></td>
 </tr>
 </tbody>
 </table>
@@ -809,10 +830,48 @@ configuration.
 For XDR and XDM the XDS Submission Set intendedRecipient attribute may
 be populated as specified in the table below.
 
-| XDSSubmissionSet Attribute | FHIR Document | Source/ Value |
-|----------------------------|---------------|---------------|
-| intendedRecipient | NA | \$person <= /ClinicalDocument/intendedRecipient<br />and/or<br />\$inst <= /ClinicalDocument/intendedRecipient/receivedOrganization
-{: .grid}
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 18%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>XDSSubmissionSet Attribute</th>
+<th>FHIR Document</th>
+<th>Source/ Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>intendedRecipient</td>
+<td>NA</td>
+<td><p>$person &lt;= /ClinicalDocument/intendedRecipient<br />
+and/or<br />
+$inst &lt;=
+/ClinicalDocument/intendedRecipient/receivedOrganization<br />
+<br />
+The intendedRecipient can be formatted<br />
+using the following XPath expression, where $inst in the expression
+below represents the receivedOrganization and where $person in the
+expression below represents the intendedRecipient.<br />
+concat(<br />
+$person/id/@extension,"^",<br />
+$person/informationRecipient/name/family,"^",<br />
+$person/informationRecipient/name/given[1],"^",<br />
+$person/informationRecipient/name/given[2],"^",<br />
+$person/informationRecipient/name/suffix,"^",<br />
+$person/informationRecipient/name/prefix,"^",<br />
+"^^^&amp;", $person/id/@root,"&amp;ISO",<br />
+"|"<br />
+$inst/name)</p>
+<p>"^^^^^&amp;",<br />
+$inst/id/@root, "&amp;ISO", "^^^^", $inst/id/@extension)<br />
+--&gt;</p></td>
+</tr>
+</tbody>
+</table>
 
 #### Use of XDS Submission Set
 
