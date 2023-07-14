@@ -22,7 +22,7 @@ IPS is a FHIR or CDA document and thus conforms to the Document Sharing Metadata
 
 ##### 3:5.9.2.1.1 FormatCode
 
-The FormatCode shall be `http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips`, the canonical URI of the [IPS Bundle Profile](https://hl7.org/fhir/uv/ips/StructureDefinition-Bundle-uv-ips.html). As a canonical URI, where a `system` is needed it shall be `urn:ietf:rfc:3986`.
+The FormatCode shall be `{{site.data.fhir.hl7ips}}/StructureDefinition/Bundle-uv-ips`, the canonical URI of the [IPS Bundle Profile]({{site.data.fhir.hl7ips}}/StructureDefinition-Bundle-uv-ips.html). As a canonical URI, where a `system` is needed it shall be `urn:ietf:rfc:3986`.
 
 ##### 3:5.9.2.1.2 mimeType
 
@@ -42,7 +42,7 @@ No additional requirements. For more information, see PCC TF-2: 4.1.3.
 
 ### 3:5.9.2 Specification
 
-This Content Module does not constrain the IPS content. For the definition of the [IPS content as defined by HL7](https://hl7.org/fhir/uv/ips/)
+This Content Module does not constrain the IPS content. For the definition of the [IPS content as defined by HL7]({{site.data.fhir.hl7ips}})
 
 See example artifacts
 
