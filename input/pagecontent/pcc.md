@@ -29,12 +29,13 @@ Consumer.
 The sharing or transmission of content from one actor to the other is
 addressed by grouping with appropriate actors from IHE profiles such as:
 
-- Cross Enterprise Document Sharing (XDS)
-- Cross Enterprise Document Sharing on Media (XDM)
-- Cross Enterprise Document Sharing Reliable Ex (XDR)
-- Cross Community Access (XCA)
-- Multi-Patient Query (MPQ)
-- Mobile Access to Health Documents (MHD)
+- [Cross Enterprise Document Sharing (XDS)](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)
+- [Cross Enterprise Document Sharing on Media (XDM)](https://profiles.ihe.net/ITI/TF/Volume1/ch-16.html)
+- [Cross Enterprise Document Sharing Reliable Ex (XDR)](https://profiles.ihe.net/ITI/TF/Volume1/ch-15.html)
+- [Cross Community Access (XCA)](https://profiles.ihe.net/ITI/TF/Volume1/ch-18.html)
+- [Multi-Patient Query (MPQ)](https://profiles.ihe.net/ITI/TF/Volume1/ch-25.html)
+- [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html)
+- [Mobile Health Document Sharing (MHDS)](https://profiles.ihe.net/ITI/MHDS/index.html)
 - Request Form for Data Capture (RFD)
 - others as appropriate
 

@@ -20,12 +20,6 @@ Best to [join the ITI-Technical committee](https://www.ihe.net/ihe_domains/it_in
 
 ## Active development
 
-- bringing in Volume 3 profiling of IPS to show metadata mapping following ITI Content Module template
-- bring in excerpt from PCC Volume 2 to show 
-  - what Content Creator/Content Consumer define and how they link to Document Sharing actors
-    - SHOULD I DO THIS? it has no FHIR-Document specifics, but it seems our reader will like to see this in html form
-  - include detailed metadata mapping tables, which incorporates CP-PCC-0300
-- somehow include an onDemand section. Likely link to the IPS concept of $summary.
 - Given the many mapping guidance, we will need to be careful to address specific audience. For example the PCC Volume 2 is not useful for an audience that is focused on FHIR IPS and FHIR MHD, and thus might confuse them more than help them.
 
 ## Background

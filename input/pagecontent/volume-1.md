@@ -1,11 +1,21 @@
 
 # 1:56 Profile name
 
-Given that HL7 has published an [International Patient Summary, which is a FHIR-Document](http://hl7.org/fhir/uv/ips/), this Implementation Guide defines how to communicate and access the IPS using [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). This is an IHE Content Module as defined in the IHE Technical Frameworks [General Introduction](https://profiles.ihe.net/GeneralIntro/). This Implementation Guide does not further refine the IPS, and thus any document conforming to the HL7 base IPS specification is applicable here.
+Given that HL7 has published an [International Patient Summary, which is a FHIR-Document](http://hl7.org/fhir/uv/ips/), this Implementation Guide defines how to communicate and access the IPS using [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). This is an IHE Content Module as defined in the IHE Technical Frameworks [General Introduction](https://profiles.ihe.net/GeneralIntro/). This Implementation Guide does not further refine the IPS, and thus any document conforming to the [HL7 base IPS specification](https://hl7.org/fhir/uv/ips/) is applicable here.
 
-TODO:introduce the above a bit more, and and explain the relationship with the PCC-IPS (aka future plans for the content in the PCC-IPS).
+An [International Patient Summary (IPS) document](https://hl7.org/fhir/uv/ips/) is an electronic health record extract containing essential healthcare information about a subject of care.
+As specified in EN 17269 and ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it.
+It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country.
 
-TODO: Explain why we are focused on the FHIR flavor of IPS as market demand. Explain that there is a CDA flavor that is not in scope of this IG.
+The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. The [FHIR IPS document specification is published by HL7](https://hl7.org/fhir/uv/ips/) and is the focus of the aIPS. There is a CDA encoding of the IPS, but there has been little interest in use at this time.
+
+The IHE aIPS does not modify the [HL7 IPS](https://hl7.org/fhir/uv/ips/) specification, but provides for methods of making the IPS accessible and providing methods to communicate it using [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). The IPS, as a "current summary", is an excellent document for the ["On-Demand" capability of the Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#212-dynamic-documents) infrastructure. On-Demand is available in [XDS](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html#10) with [On-Demand Documents Option](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [XCA](https://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) with [On-Demand Documents Option](https://profiles.ihe.net/ITI/TF/Volume1/ch-18.html#18.2.4), and with [MHD/MHDS](https://profiles.ihe.net/ITI/MHD/index.html). Further details for IPS use of On-Demand are outlined below in section 3.9.2.1.2.
+
+The IPS document is composed by a set of robust, well-defined and potentially reusable sets of core data items (indicated as IPS library in the figure below). The tight focus of the IPS on unplanned care is in this case not a limitation, but, on the contrary, facilitates their potential re-use beyond the IPS scope.
+
+<div>
+<img src="IPS_doc_library.png" caption="Figure 1: The IPS product and by-products" width="70%" >
+</div>
 
 ## 1:56.1 aIPS Actors, Transactions, and Content Modules
 
@@ -21,33 +31,35 @@ TODO: Explain why we are focused on the FHIR flavor of IPS as market demand. Exp
 <br clear="all">
 
 ### 56.1.1 Actors
+
 The actors in this profile are described in more detail in the sections below.
 
 <a name="creator"> </a>
 
 #### 56.1.1.1 Content Creator
 
-The Content Creator creates the [IPS content](http://hl7.org/fhir/uv/ips/) and shares it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+The [Content Creator](pcc.html#31-document-sharing-pcc-1) creates the [IPS content](http://hl7.org/fhir/uv/ips/) and shares it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
-FHIR Capability Statement for [Content Creator]{CapabilityStatement-IHE.aIPS.ContentCreator.html}
+FHIR Capability Statement for [Content Creator](CapabilityStatement-IHE.aIPS.ContentCreator.html)
 
-The HL7 IPS is mapped to the Document Sharing Metadata according to PCC Volume 2: 4.1. This shows how to map the FHIR Composition resource elements into XDS/XDM/XDR/XCA [Document Entry](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2) and MHD [FHIR DocumentReference](https://profiles.ihe.net/ITI/MHD/32_fhir_maps.html) elements.
+The HL7 IPS is serialized into a FHIR Document Bundle and encoded as a document following the [PCC Serializing FHIR Documents](pcc.html#31-document-sharing-pcc-1).
+The HL7 IPS is mapped to the [Document Sharing Metadata according to PCC Volume 2: 4.1](pcc.html#4-ihe-patient-care-coordination-bindings). This shows how to map the FHIR Composition resource elements into XDS/XDM/XDR/XCA [Document Entry](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2) and MHD [FHIR DocumentReference](https://profiles.ihe.net/ITI/MHD/32_fhir_maps.html) elements.
 
 <a name="consumer"> </a>
 
 #### 56.1.1.2 Content Consumer
 
-The Content Consumer consumes the [IPS content](http://hl7.org/fhir/uv/ips/) and obtains it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+The [Content Consumer](pcc.html#31-document-sharing-pcc-1) consumes the [IPS content](http://hl7.org/fhir/uv/ips/) and obtains it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
-FHIR Capability Statement for [Content Consumer]{CapabilityStatement-IHE.aIPS.ContentConsumer.html}
+FHIR Capability Statement for [Content Consumer](CapabilityStatement-IHE.aIPS.ContentConsumer.html)
 
-The HL7 IPS is mapped to the Document Sharing Metadata according to PCC Volume 2: 4.1. This shows how to map the FHIR Composition resource elements into XDS/XDM/XDR/XCA [Document Entry](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2) and MHD [FHIR DocumentReference](https://profiles.ihe.net/ITI/MHD/32_fhir_maps.html) elements.
+The HL7 IPS is mapped to the [Document Sharing Metadata according to PCC Volume 2: 4.1](pcc.html#4-ihe-patient-care-coordination-bindings). This shows how to map the FHIR Composition resource elements into XDS/XDM/XDR/XCA [Document Entry](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2) and MHD [FHIR DocumentReference](https://profiles.ihe.net/ITI/MHD/32_fhir_maps.html) elements.
 
 #### 56.1.2 IPS Content
 
 The Content Creator and Content Consumer share the [IPS content](http://hl7.org/fhir/uv/ips/) using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
-The HL7 IPS is mapped to the Document Sharing Metadata according to PCC Volume 2: 4.1. This shows how to map the FHIR Composition resource elements into XDS/XDM/XDR/XCA [Document Entry](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2) and MHD [FHIR DocumentReference](https://profiles.ihe.net/ITI/MHD/32_fhir_maps.html) elements.
+The HL7 IPS is mapped to the [Document Sharing Metadata according to PCC Volume 2: 4.1](pcc.html#4-ihe-patient-care-coordination-bindings). This shows how to map the FHIR Composition resource elements into XDS/XDM/XDR/XCA [Document Entry](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2) and MHD [FHIR DocumentReference](https://profiles.ihe.net/ITI/MHD/32_fhir_maps.html) elements.
 
 <a name="actor-options"> </a>
 
@@ -66,8 +78,7 @@ between options when applicable are specified in notes.
 ### 56.2.1 View Option
 
 This option defines the processing requirements placed on Content Consumers for providing
-access, rendering and management of the medical document. See the View Option in IHE PCC
-TF-2:3.1.1 for more details on this option.
+access, rendering and management of the medical document. See the [View Option in IHE PCC TF-2:3.1.1](pcc.html#31-document-sharing-pcc-1) for more details on this option.
 
 The Content Consumer Actor shall be able to present a view of the document.
 
@@ -77,14 +88,13 @@ TODO: Is there a minimal rendering requirement? Is rendering of the Composition.
 
 This option defines the processing requirements placed on Content Consumers for providing
 access, and importing the entire medical document and managing it as part of the patient record.
-See the Document Import Option in IHE PCC TF-2:3.1.2 for more details on this option.
+See the [Document Import Option in IHE PCC TF-2:3.1.2](pcc.html#31-document-sharing-pcc-1) for more details on this option.
 
 ### 56.2.3 Discrete Data Import Option
 
 This option defines the processing requirements placed on Content Consumers for providing
 access, and importing discrete data from selected sections of the medical document and
-managing them as part of the patient record. See the Discrete Data Import Option in IHE PCC
-TF-2:3.1.4 for more details on this option.
+managing them as part of the patient record. See the [Discrete Data Import Option in IHE PCC TF-2:3.1.4](pcc.html#31-document-sharing-pcc-1) for more details on this option.
 
 <a name="required-groupings"> </a>
 
@@ -129,6 +139,11 @@ Then I need to have clear specification on how I express in Document Sharing the
 
 Note: the above use-case is written in [Gherkin](https://cucumber.io/docs/gherkin/), a use-case language optimized for automated testing.
 
+See further discussion:
+- General explaination of [Centralized Discovery and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#32-centralized-discovery-and-retrieve)
+- General explaination of [Federated Discover and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#33-federated-discovery-and-retrieve)
+- General explaination of [Document Publishing in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#321-document-publishing)
+
 ### 56.4.2.2  Making On-Demand access to IPS available
 
 ```Gherkin
@@ -139,6 +154,12 @@ And there is a need to make it discoverable
 Then I need to have clear specification on how I express in Document Sharing the existence of a FHIR IPS sources
 ```
 
+See further discussion:
+- General explaination of [Centralized Discovery and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#32-centralized-discovery-and-retrieve)
+- General explaination of [Federated Discover and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#33-federated-discovery-and-retrieve)
+- General explaination of [Dynamic Documents in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#212-dynamic-documents)
+- Content Module specific for IPS On-Demand - [3:5.9.2.1.2 On-Demand](content.html#359212-on-demand)
+
 ### 56.4.2.3  Retrieving an IPS
 
 ```Gherkin
@@ -148,6 +169,11 @@ When an application needs access to a FHIR IPS
 Then I need to have clear specification on how I use Document Sharing to find FHIR IPS sources
 ```
 
+See further discussion:
+- General explaination of [Centralized Discovery and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#32-centralized-discovery-and-retrieve)
+- General explaination of [Federated Discover and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#33-federated-discovery-and-retrieve)
+- General explaination of [Document Discovery and retrival in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#322-document-discovery)
+
 ### 56.4.2.4  Pushing and IPS to a recipient
 
 ```Gherkin
@@ -156,6 +182,9 @@ And that IHE Document Sharing is a recognized document sharing infrastructure
 When an FHIR IPS needs to be sent to a specific recipient
 Then I need to have clear specification on how I use Document Sharing to find FHIR IPS sources
 ```
+
+See further discussion:
+- General explaination of [PUSH model of Document Sharing in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#31-push)
 
 <a name="security-considerations"> </a>
 
@@ -167,5 +196,4 @@ See [Security and Privacy Solutions: Handbooks, Profiles, and Content](https://p
 
 ## 56.6 aIPS Cross-Profile Considerations
 
-none
-
+All cross-profile considerations are discussed elsewhere.

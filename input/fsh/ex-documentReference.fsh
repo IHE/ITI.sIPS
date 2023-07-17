@@ -13,8 +13,6 @@ Mapping Concerns (TODO):
 - IPS has multiple authenticators, XDS DocumentEntry has only one available
 - IPS does not have a class, Comprehensive requires a category - replicated the type.
 - IPS didn't have a declared language, presumed US
-- IPS didn't have a facility type, Comprehensive requires - guessed
-- IPS didn't have a practice setting, Comprhensive requires - guessed
 - made up an inline Patient
 """
 Usage: #example
@@ -49,8 +47,6 @@ Usage: #example
 * content.format.code = #http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
 * content.attachment.creation = 2017-12-11T14:30:00+01:00
 // note the size and hash are NOT included at all
-
-// Required but not clear what should be here
 * content.attachment.language = urn:ietf:bcp:47#en
 * context.facilityType = http://snomed.info/sct#225732001 "Community hospital"
 * context.practiceSetting =  http://snomed.info/sct#408443003 "General medical practice"
@@ -70,8 +66,6 @@ Mapping Concerns (TODO):
 - IPS has multiple authenticators, XDS DocumentEntry has only one available
 - IPS does not have a class, Comprehensive requires a category - replicated the type.
 - IPS didn't have a declared language, presumed US
-- IPS didn't have a facility type, Comprehensive requires - guessed
-- IPS didn't have a practice setting, Comprhensive requires - guessed
 - made up an inline Patient
 """
 Usage: #example
@@ -106,8 +100,6 @@ Usage: #example
 * content.format.code = #http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
 * content.attachment.creation = 2017-12-11T14:30:00+01:00
 // note the size and hash are NOT included at all
-
-// Required but not clear what should be here
 * content.attachment.language = urn:ietf:bcp:47#en
 * context.facilityType = http://snomed.info/sct#225732001 "Community hospital"
 * context.practiceSetting =  http://snomed.info/sct#408443003 "General medical practice"
