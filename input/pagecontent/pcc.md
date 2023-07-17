@@ -4,12 +4,12 @@
 {:.grid .bg-info}
 
 
-# IHE Transactions 
+# 3 IHE Transactions
 
 This section defines each IHE transaction in detail, specifying the
 standards used, and the information transferred.
 
-## Document Sharing \[PCC-1\]
+## 3.1 Document Sharing \[PCC-1\]
 
 \[PCC-1\] describes common functional requirements for content exchange.
 
@@ -18,11 +18,8 @@ reference these options as requirements for its Content Consumer;
 profiles may define other options as necessary.
 
 - **Actor**: Content Creator
-
 - **Role**: Create document(s) to be exchanged between two actors
-
 - **Actor**: Content Consumer
-
 - **Role**: Consume document(s) that has been exchanged between two
   actors
 
@@ -33,19 +30,12 @@ The sharing or transmission of content from one actor to the other is
 addressed by grouping with appropriate actors from IHE profiles such as:
 
 - Cross Enterprise Document Sharing (XDS)
-
 - Cross Enterprise Document Sharing on Media (XDM)
-
 - Cross Enterprise Document Sharing Reliable Ex (XDR)
-
 - Cross Community Access (XCA)
-
 - Multi-Patient Query (MPQ)
-
 - Mobile Access to Health Documents (MHD)
-
 - Request Form for Data Capture (RFD)
-
 - others as appropriate
 
 The population of metadata in the transport from the created content to
@@ -57,27 +47,24 @@ MHD) may also be used to exchange content.
 
 **<u>Content Creator Expected Actions</u>**
 
-1)  The Content Creator SHALL create the document according to the
-    content profile that is specified by the actor in the profile where
-    it is used.
-
-2)  The content SHALL be shared using appropriate actors from the IHE
-    profile it is grouped with as described above.
+1. The Content Creator SHALL create the document according to the
+content profile that is specified by the actor in the profile where
+it is used.
+2. The content SHALL be shared using appropriate actors from the IHE
+profile it is grouped with as described above.
 
 **<u>Content Consumer Expected Actions</u>**
 
-1)  The Content Consumer SHALL be able access documents using
-    appropriate actors from the IHE profile it is grouped with as
-    described above.
+1. The Content Consumer SHALL be able access documents using
+appropriate actors from the IHE profile it is grouped with as
+described above.
+2. The Content Consumer SHALL support processing of the document as
+needed by the profile.
+3. The Content Consumer options below MAY be referenced by profiles
+where this transaction is used to provide specific processing
+requirements.
 
-2)  The Content Consumer SHALL support processing of the document as
-    needed by the profile.
-
-3)  The Content Consumer options below MAY be referenced by profiles
-    where this transaction is used to provide specific processing
-    requirements.
-
-### View Option 
+### 3.1.1 View Option
 
 A Content Consumer that supports the View Option:
 
@@ -94,7 +81,7 @@ document source provides a stylesheet. Content Consumers may optionally
 view the document with their own stylesheet, but must provide a
 mechanism to view using the source stylesheet.
 
-### Document Import Option
+### 3.1.2 Document Import Option
 
 The Content Consumer that supports the ***Document*** Import Option
 shall also support the View Option. In addition, the Content Consumer
@@ -116,7 +103,7 @@ Content Consumers by this Integration Profile, but not required, as the
 events that may justify such a query are extremely implementation
 specific.
 
-### Section Import Option
+### 3.1.3 Section Import Option
 
 The Content Consumer that supports the ***Section*** Import Option shall
 also support the View Option. In addition, the Content Consumer that
@@ -142,7 +129,7 @@ This Option does not require, but does not exclude the Content Consumer
 from offering a means to select and import specific subsets of the
 narrative text of a section.
 
-### Discrete Data Import Option
+### 3.1.4 Discrete Data Import Option
 
 The Content Consumer that supports the Discrete Data Import Option shall
 be able to support the storage of the structured content of one or more
@@ -169,7 +156,7 @@ query the Document Registry about a document from which discrete data
 was previously imported in order to find out if this previously imported
 document may have been replaced or has received an addendum.
 
-## Serializing FHIR Documents
+### 3.1.5 Serializing FHIR Documents
 
 A FHIR document is a FHIR Bundle where the first entry is a FHIR
 Composition and resources referenced are in the Bundle. A composition is
@@ -204,7 +191,7 @@ attributes see <http://hl7.org/fhir/documentreference-mappings.html#xds>
 Additionally, below in table 4.1.1 is a mapping between FHIR Document
 Composition elements and the XDS DocumentEntry attributes.
 
-# IHE Patient Care Coordination Bindings
+# 4 IHE Patient Care Coordination Bindings
 
 This section describes how the payload used in a transaction of an IHE
 profile is related to and/or constrains the data elements sent or
@@ -217,13 +204,14 @@ should identify the transactions and content to which it applies.
 The source for all required and optional attributes have been defined in
 the bindings below. Two tables describe the XDS object
 types: XDSDocumentEntry, and XDSSubmissionSet.
+The definitions of the [metadata attributes is defined in ITI Volume 3:4](https://profiles.ihe.net/ITI/TF/Volume3/index.html#4), with the [optionality defined in ITI Volume 3:4.3](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.3.html#4.3)
 For a mapping between DocumentReferenece and XDS DocumentEntry
 attributes see <http://hl7.org/fhir/documentreference-mappings.html#xds>
 
-## Medical Document Binding to Document Sharing Metadata
+## 4.1 Medical Document Binding to Document Sharing Metadata
 
-This binding defines a transformation that generates metadata for the
-XDSDocumentEntry and XDSSubmissionSet elements of appropriate
+This binding defines a transformation that generates 
+[metadata for the XDSDocumentEntry and XDSSubmissionSet](https://profiles.ihe.net/ITI/TF/Volume3/index.html#4) elements of appropriate
 transactions from the [Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) profiles given a medical document
 and information from other sources. The medical document refers to the
 document being stored in a repository that will be referenced in the
@@ -233,20 +221,20 @@ facility, local agreements, other documents in the registry/repository,
 and this Content Profile. 
 See [Overview of Health Document Sharing Communities](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#13-overview-of-health-document-sharing-communities)
 
-In many cases, the CDA/FHIR document is created for the purposes of sharing
-within an XDS Affinity Domain. In these cases the context of the CDA/FHIR Document and
+In many cases, the [CDA/FHIR document](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#231-fhir-document-vs-cda-document) is created for the purposes of sharing
+within an XDS Affinity Domain. In these cases the context of the [CDA/FHIR Document](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#231-fhir-document-vs-cda-document) and
 the context of the XDS Affinity Domain are the same, in which case the
 following mappings shall apply.
 
-In other cases, the CDA/FHIR document may have been created for internal use,
-and are subsequently being shared. In these cases the context of the CDA/FHIR
-document would not necessarily coincide with that of the XDS Affinity
+In other cases, the [CDA/FHIR document](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#231-fhir-document-vs-cda-document) may have been created for internal use,
+and are subsequently being shared. In these cases the context of the [CDA/FHIR document](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#231-fhir-document-vs-cda-document) 
+would not necessarily coincide with that of the XDS Affinity
 Domain, and the mappings below would not necessarily apply.
 See [Principles of IHE for Health Document sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#2-principles-of-ihe-for-health-document-sharing)
 
 Please note the specifics given in the table below.
 
-### XDSDocumentEntry Metadata
+### 4.1.1 XDSDocumentEntry Metadata
 
 <table>
 <colgroup>
@@ -278,7 +266,7 @@ Please note the specifics given in the table below.
 </td>
 <td></td>
 <td>
-<p>R NA</p>
+<p>NA</p>
 </td>
 <td></td>
 </tr>
@@ -378,7 +366,7 @@ appropriate value for Type of Service, based on the LOINC Type of
 Service (see Page 53 of the LOINC User's Manual).</p>
 </td>
 <td>
-<p>R Must be consistent with Composition.category</p>
+<p>Must be consistent with Composition.category</p>
 </td>
 <td>
 <p>Must be consistent with /ClinicalDocument/code/@code</p>
@@ -393,7 +381,7 @@ Service (see Page 53 of the LOINC User's Manual).</p>
 on the Type of Service.</p>
 </td>
 <td>
-<p>R Must be consistent with Composition.category</p>
+<p>Must be consistent with Composition.category</p>
 </td>
 <td>
 <p>Must be consistent with /ClinicalDocument/code/@code</p>
@@ -409,7 +397,7 @@ security labels to Affinity Domain specified coded values and coding
 system.</p>
 </td>
 <td>
-<p>R Derived from Composition.confidentiality,
+<p>Derived from Composition.confidentiality,
 Composition.meta.security</p>
 </td>
 <td>
@@ -448,7 +436,7 @@ in UTC, so the timezone offset if present must be added to the current
 time to obtain the UTC time.</p>
 </td>
 <td>
-<p>R Composition.date</p>
+<p>Composition.date</p>
 </td>
 <td>
 <p>/ClinicalDocument/effectiveTime</p>
@@ -474,7 +462,7 @@ the consumer of the documents in the registry. They may come from
 anywhere in the document, according to its purpose.</p>
 </td>
 <td>
-<p>O Composition.event</p>
+<p>Composition.event</p>
 </td>
 <td>
 <p>They may come from anywhere in the CDA document, according to its
@@ -507,7 +495,7 @@ above.</p>
 within the document specifications.</p>
 </td>
 <td>
-<p>R Bundle.meta.profile</p>
+<p>Bundle.meta.profile</p>
 </td>
 <td>
 <p>The format code for each PCC Document content profile is provided
@@ -559,7 +547,7 @@ Organization</p>
 <p>The human language of the narrative within the document</p>
 </td>
 <td>
-<p>R Composition.meta. language</p>
+<p>Composition.meta. language</p>
 </td>
 <td>
 <p>/ClinicalDocument/languageCode</p>
@@ -571,7 +559,7 @@ Organization</p>
 </td>
 <td></td>
 <td>
-<p>O Composition.attester</p>
+<p>Composition.attester</p>
 </td>
 <td>
 <p>$person &lt;= /ClinicalDocument/<br />
@@ -597,7 +585,7 @@ $person/assignedPerson/name/prefix,"^",<br />
 <p>The mime type of the document.</p>
 </td>
 <td>
-<p>R see <a
+<p>see <a
 href="http://hl7.org/fhir/http.html#mime-type">http://hl7.org/fhir/http.html#mime-type</a></p>
 </td>
 <td>
@@ -615,7 +603,7 @@ identity profiles.</p>
 <p>See sourcePatientId below.</p>
 </td>
 <td>
-<p>R Composition.subject</p>
+<p>Composition.subject</p>
 </td>
 <td>
 <p>$patID &lt;= /ClinicalDocument/recordTarget/<br />
@@ -633,7 +621,7 @@ Recommend the use of the classification system for Practice Setting,
 such as that described by the Subject Matter Domain in LOINC.</p>
 </td>
 <td>
-<p>R May be derived from Composition.author where the Reference is to an
+<p>May be derived from Composition.author where the Reference is to an
 Organization</p>
 </td>
 <td></td>
@@ -647,7 +635,7 @@ Organization</p>
 codes described above.</p>
 </td>
 <td>
-<p>R May be derived from Composition.author where the Reference is to an
+<p>May be derived from Composition.author where the Reference is to an
 Organization</p>
 </td>
 <td></td>
@@ -701,7 +689,7 @@ serviceEvent/effectiveTime/high/<br />
 domain.</p>
 </td>
 <td>
-<p>R Composition.subject</p>
+<p>Composition.subject</p>
 </td>
 <td>
 <p>$patID &lt;= /ClinicalDocument/recordTarget/<br />
@@ -721,7 +709,7 @@ concat($patID/@extension,"^^^&amp;", $patID/@root, "&amp;ISO")</p>
 components of the patientRole element in the clinical document.</p>
 </td>
 <td>
-<p>R Composition.subject</p>
+<p>Composition.subject</p>
 </td>
 <td>
 <p>/ClinicalDocument/recordTarget/<br />
@@ -736,7 +724,7 @@ patientRole</p>
 <p>/ClinicalDocument/title</p>
 </td>
 <td>
-<p>O Composition.title</p>
+<p>Composition.title</p>
 </td>
 <td>
 <p>/ClinicalDocument/title</p>
@@ -752,7 +740,7 @@ of document type codes. One suggested coding system to use for typeCode
 is LOINC, in which case the mapping step can be omitted.</p>
 </td>
 <td>
-<p>R Composition.type</p>
+<p>Composition.type</p>
 </td>
 <td>
 <p>/ClinicalDocument/code/@code</p>
@@ -767,7 +755,7 @@ Name</p>
 <p>The display name of the typeCode above.</p>
 </td>
 <td>
-<p>R Composition.type</p>
+<p>Composition.type</p>
 </td>
 <td>
 <p>/ClinicalDocument/code/@displayName</p>
@@ -781,7 +769,7 @@ Name</p>
 <p>The uniqueId is the unique id within the document.</p>
 </td>
 <td>
-<p>R Composition.identifier</p>
+<p>Composition.identifier</p>
 
 <p>or</p>
 
@@ -797,7 +785,7 @@ concat($docID/@root,"^", $docID/@extension)</p>
 </tbody>
 </table>
 
-#### XDSSubmissionSet Metadata
+#### 4.1.1.1 XDSSubmissionSet Metadata
 
 The submission set metadata is as defined for XDS, and is not
 necessarily affected by the content of the clinical document. Metadata
@@ -814,18 +802,18 @@ be populated as specified in the table below.
 | intendedRecipient | NA | \$person <= /ClinicalDocument/intendedRecipient<br />and/or<br />\$inst <= /ClinicalDocument/intendedRecipient/receivedOrganization
 {: .grid}
 
-#### Use of XDS Submission Set
+#### 4.1.1.2 Use of XDS Submission Set
 
 This content format uses the XDS Submission Set to create a package of
 information to send from one provider to another. All documents
 referenced by the Medical Summary in this Package must be in the
 submission set.
 
-#### Use of XDS Folders
+#### 4.1.1.3 Use of XDS Folders
 
 No specific requirements identified.
 
-#### Configuration
+#### 4.1.1.4 Configuration
 
 IHE Content Profiles using this binding require that Content Creators
 and Content Consumers be configurable with institution and other

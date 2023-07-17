@@ -6,46 +6,53 @@
 
 ## 3:5.9 International Patient Summary Content Module
 
-IPS is great... long live IPS
+An [International Patient Summary (IPS) document](https://hl7.org/fhir/uv/ips/) is an electronic health record extract containing essential healthcare information about a subject of care.
+As specified in EN 17269 and ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it.
+It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country.
+
+The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. The [IPS document specification is published by HL7](https://hl7.org/fhir/uv/ips/). The IHE aIPS does not modify that specification, but provides for methods of making the IPS accessible and providing methods to communicate it using [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+
+The IPS document is composed by a set of robust, well-defined and potentially reusable sets of core data items (indicated as IPS library in the figure below). The tight focus of the IPS on unplanned care is in this case not a limitation, but, on the contrary, facilitates their potential re-use beyond the IPS scope.
+
+<div>
+<img src="IPS_doc_library.png" caption="Figure 1: The IPS product and by-products" width="70%" >
+</div>
 
 ### 3:5.9.1 Referenced Standards
 
-FHIR is great
+- [International Patient Summary (IPS) document](https://hl7.org/fhir/uv/ips/)
 
 ### 3:5.9.2 Document Sharing Metadata
 
-TODO: Likely need to express the fact that XDS requires only one mime-type, so to support environments that need both JSON and XML mime-type encoding of the IPS document bundle; one would need to register two DocumentReferences and indicate they are transforms. (Note could also be used with CDA vs FHIR)
+The [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) infrastructures define a common set of Document Metadata, Submission Set, and Folders. There are [defined methods of communicating documents](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#3-document-sharing-profiles) including push, centralized registry, and federated discovery and retrieval. The metadata model is designed to be content agnostic so can support any past or future document specification, which enables all existing networks to support the IPS without modification.
+
+There is a limitation in the Document Sharing metadata that each Document entry must have only one mime-type. The FHIR model supports many mime-type encodings, as does IPS. Some environments may choose one of the FHIR mime-type encodings, where others may need both JSON and XML mime-type encoding of the IPS document bundle. Where more than one mime-type encoding is needed one would need to register multiple Document entries and [indicate they are transforms](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#27-document-relationships) only differing in mime-type. With multiple Document entries registered, the Document Consumer can pick the mime-type desired, and with the [transform relationship](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#27-document-relationships) be confident that there is no semantic difference between the two mime-type encodings.
 
 #### 3:5.9.2.1 DocumentEntry/DocumentReference Metadata
 
-IPS is a FHIR or CDA document and thus conforms to the Document Sharing Metadata requirements in the PCC TF-2:4 unless otherwise specified below.
+IPS is a FHIR document, the Document Entry metadata is derived from the FHIR document Composition Resource following the [Document Sharing Metadata requirements in the PCC TF-2:4](pcc.html) unless otherwise specified below.
 
 ##### 3:5.9.2.1.1 FormatCode
 
-The FormatCode shall be `{{site.data.fhir.hl7ips}}/StructureDefinition/Bundle-uv-ips`, the canonical URI of the [IPS Bundle Profile]({{site.data.fhir.hl7ips}}/StructureDefinition-Bundle-uv-ips.html). As a canonical URI, where a `system` is needed it shall be `urn:ietf:rfc:3986`.
-
-##### 3:5.9.2.1.2 mimeType
-
-TODO: say something about mimeType. some environments may choose only one mime-type (e.g. JSON), while others may have Content Consumers that may want other mime-types. When multiple mime-types are needed, there will need to be multiple DocumentEntry/DocumentReference registered with a transform link between them.
-
-##### 3:5.9.2.1.3 todo
-
-TODO: anything else?
+The FormatCode shall be `{{site.data.fhir.hl7ips}}/StructureDefinition/Bundle-uv-ips`, the canonical URI of the [IPS Bundle Profile]({{site.data.fhir.hl7ips}}/StructureDefinition-Bundle-uv-ips.html). As a canonical URI, where a `system` is needed, it shall be `urn:ietf:rfc:3986`.
 
 #### 3:5.9.2.2 SubmissionSet Metadata
 
-No additional requirements. For more information, see PCC TF-2: 4.1.3.
+No additional requirements. For more information, see [PCC TF-2: 4.1.1.1](pcc.html).
 
 #### 3:5.9.2.2 Folder Metadata
 
-No additional requirements. For more information, see PCC TF-2: 4.1.3.
+No additional requirements. For more information, see [PCC TF-2: 4.1.1.3](pcc.html).
 
 ### 3:5.9.2 Specification
 
 This Content Module does not constrain the IPS content. For the definition of the [IPS content as defined by HL7]({{site.data.fhir.hl7ips}})
 
+Given the [IPS examples](https://hl7.org/fhir/uv/ips/examples.html) provided in the [IPS Implementation Guide](https://hl7.org/fhir/uv/ips), the following DocumentReference would be an example as Registered in Document Sharing. Submission Set and Folders are not shown as they are more dependent on the situation of the publication than the content itself.
+
 See example artifacts
 
-- DocumentReference examples
+- [Example Bundle: IPS Bundle example](https://hl7.org/fhir/uv/ips/Bundle-IPS-examples-Bundle-01.html) 
+  - [Example DocumentReference for IPS Bundle in XML encoding](DocumentReference-ex-DocumentReference-Bundle-01-xml.html)
+  - [Example DocumentReference for IPS Bundle in JSON encoding](DocumentReference-ex-DocumentReference-Bundle-01-json.html) with transform relationship to XML encoding.
 
-TODO: Not clear if there are any other artifacts. One could profile DocumentReference, but that profiling may not be useful. That profile could have mapping, but it is unclear that mapping in a FHIR Reference profile would be different than found in the FHIR core specification.
