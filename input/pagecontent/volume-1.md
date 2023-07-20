@@ -1,10 +1,8 @@
 
-# 1:56 Profile name
-
 Given that HL7 has published an [International Patient Summary, which is a FHIR-Document](http://hl7.org/fhir/uv/ips/), this Implementation Guide defines how to communicate and access the IPS using [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). This is an IHE Content Module as defined in the IHE Technical Frameworks [General Introduction](https://profiles.ihe.net/GeneralIntro/). This Implementation Guide does not further refine the IPS, and thus any document conforming to the [HL7 base IPS specification](https://hl7.org/fhir/uv/ips/) is applicable here.
 
 An [International Patient Summary (IPS) document](https://hl7.org/fhir/uv/ips/) is an electronic health record extract containing essential healthcare information about a subject of care.
-As specified in EN 17269 and ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it.
+As specified in EN ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it.
 It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country.
 
 The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. The [FHIR IPS document specification is published by HL7](https://hl7.org/fhir/uv/ips/) and is the focus of the aIPS. There is a CDA encoding of the IPS, but there has been little interest in use at this time.
