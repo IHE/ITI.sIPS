@@ -277,7 +277,7 @@ Please note the specifics given in the table below.
 </td>
 <td></td>
 <td>
-<p>R2 Composition. author where the Reference is to an Organization</p>
+<p>Composition. author where the Reference is to an Organization</p>
 </td>
 <td>
 <p>$inst &lt;= /ClinicalDocument/author<br />
@@ -296,7 +296,7 @@ concat($inst/name)</p>
 </td>
 <td></td>
 <td>
-<p>R2 Composition.author where the Reference is to a Practitioner,
+<p>Composition.author where the Reference is to a Practitioner,
 Device, or Patient</p>
 </td>
 <td>
@@ -324,7 +324,7 @@ participation function defined in the document to the set of author
 roles configured for the affinity domain.</p>
 </td>
 <td>
-<p>R2 Composition.author where the Reference is to a
+<p>Composition.author where the Reference is to a
 PractitionerRole</p>
 </td>
 <td>
@@ -346,7 +346,7 @@ classifications include those found in SNOMED-CT, or the HIPAA
 Healthcare Provider Taxonomy.</p>
 </td>
 <td>
-<p>R2 Composition.author where the Reference is a PractitionerRole use
+<p>Composition.author where the Reference is a PractitionerRole use
 the PractitionerRole.speciality</p>
 </td>
 <td>
@@ -420,9 +420,7 @@ templateId/@root=<br />
 <p>There is no well-known element in a document to derive a simple
 comment.</p>
 </td>
-<td>
-<p>O</p>
-</td>
+<td></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -479,8 +477,7 @@ purpose.</p>
 above.</p>
 </td>
 <td>
-<p>R(if event<br />
-Code is valued) Composition.event</p>
+<p>Composition.event</p>
 </td>
 <td>
 <p>These are the display names for the collection of keywords described
@@ -653,7 +650,7 @@ in UTC, so the timezone offset if present must be added to the current
 time to obtain the UTC time.</p>
 </td>
 <td>
-<p>R2 Composition.event.period</p>
+<p>Composition.event.period</p>
 </td>
 <td>
 <p>/ClinicalDocument/documentationOf/<br />
@@ -673,7 +670,7 @@ in UTC, so the timezone offset if present must be added to the current
 time to obtain the UTC time.</p>
 </td>
 <td>
-<p>R2 Composition.event.period</p>
+<p>Composition.event.period</p>
 </td>
 <td>
 <p>/ClinicalDocument/documentationOf/<br />
