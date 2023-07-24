@@ -7,7 +7,7 @@
 ## 3:5.9 International Patient Summary Content Module
 
 An [International Patient Summary (IPS) document](https://hl7.org/fhir/uv/ips/) is an electronic health record extract containing essential healthcare information about a subject of care.
-As specified in EN 17269 and ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it.
+As specified in EN ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it.
 It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country.
 
 The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. The [IPS document specification is published by HL7](https://hl7.org/fhir/uv/ips/).
