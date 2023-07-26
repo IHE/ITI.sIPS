@@ -78,9 +78,7 @@ between options when applicable are specified in notes.
 This option defines the processing requirements placed on Content Consumers for providing
 access, rendering and management of the medical document. See the [View Option in IHE PCC TF-2:3.1.1](pcc.html#31-document-sharing-pcc-1) for more details on this option.
 
-The Content Consumer Actor shall be able to present a view of the document.
-
-TODO: Is there a minimal rendering requirement? Is rendering of the Composition.text sufficient? Given that the .text is not required, is this view option useful?
+The Content Consumer Actor shall be able to present a view of the document. Minimal view guidance following [FHIR core Document Presentation](http://hl7.org/fhir/documents.html#presentation).
 
 ### 56.2.2 Document Import Option
 

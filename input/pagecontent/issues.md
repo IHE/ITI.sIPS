@@ -3,7 +3,7 @@
 
 ### Version 1.0.0-comment
 
--initial public-comment.
+- initial public-comment.
 
 ### Relationship of aIPS to PCC-IPS
 
@@ -15,8 +15,8 @@ The [PCC-IPS](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.
 
 ### Open Issues
 
-- ToDo_001: this is open issue 1
+- [aIPS_001: Minimal View Option](https://github.com/IHE/ITI.aIPS/issues/8) is referring the reader to FHIR Core for Documents. Are there more specific requirements available from IPS or IHE?
 
 ### Closed Issues
 
-- ToDo_002: this is closed issue 2
+none
