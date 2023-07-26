@@ -2,18 +2,18 @@
 Instance:   ex-DocumentReference-Bundle-01-xml
 InstanceOf: IHE.MHD.UnContained.Comprehensive.DocumentReference
 //InstanceOf: IHE.MHD.Minimal.DocumentReference
-Title:      "DocumentReference for the Bundle-01 IPS document"
+Title:      "DocumentReference for the Bundle-01 IPS document in XML"
 Description: """
 Example of a Comprehensive DocumentReference resource.
 
-- Where the IPS Bundle is [the IPS examples 01](https://hl7.org/fhir/uv/ips/Bundle-IPS-examples-Bundle-01.html) 
+- This is for the XML encoding
+- Where the IPS Bundle is [the IPS examples 01]({{site.data.fhir.hl7ips}}Bundle-IPS-examples-Bundle-01.html) 
 - This is fully filled for all mandatory elements.
-
-Mapping Concerns (TODO):
 - IPS has multiple authenticators, XDS DocumentEntry has only one available
 - IPS does not have a class, Comprehensive requires a category - replicated the type.
 - IPS didn't have a declared language, presumed US
 - made up an inline Patient
+- facility and practice setting come from publisher policy or setting and are not derived from Composition
 """
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
@@ -25,7 +25,7 @@ Usage: #example
 * status = #current
 * content.attachment.contentType = #application/fhir+xml
 // This URL would be used to retrieve the content, and in this case that would be the given FHIR Bundle
-* content.attachment.url = "https://hl7.org/fhir/uv/ips/Bundle-IPS-examples-Bundle-01.xml"
+* content.attachment.url = "{{site.data.fhir.hl7ips}}Bundle-IPS-examples-Bundle-01.xml"
 //* content.attachment.url = "http://example.com/fhir/bundle-1.xml"
 * type = http://loinc.org#60591-5 "Patient summary Document"
 // class does not exist in this example, so replicate the type
@@ -55,18 +55,18 @@ Usage: #example
 Instance:   ex-DocumentReference-Bundle-01-json
 InstanceOf: IHE.MHD.UnContained.Comprehensive.DocumentReference
 //InstanceOf: IHE.MHD.Minimal.DocumentReference
-Title:      "DocumentReference for the Bundle-01 IPS document"
+Title:      "DocumentReference for the Bundle-01 IPS document in JSON"
 Description: """
 Example of a Comprehensive DocumentReference resource.
 
-- Where the IPS Bundle is [the IPS examples 01](https://hl7.org/fhir/uv/ips/Bundle-IPS-examples-Bundle-01.html) 
+- This is for the JSON encoding. Links in Transform relationship to the XML encoded form.
+- Where the IPS Bundle is [the IPS examples 01]({{site.data.fhir.hl7ips}}Bundle-IPS-examples-Bundle-01.html) 
 - This is fully filled for all mandatory elements.
-
-Mapping Concerns (TODO):
 - IPS has multiple authenticators, XDS DocumentEntry has only one available
 - IPS does not have a class, Comprehensive requires a category - replicated the type.
 - IPS didn't have a declared language, presumed US
 - made up an inline Patient
+- facility and practice setting come from publisher policy or setting and are not derived from Composition
 """
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
@@ -78,7 +78,7 @@ Usage: #example
 * status = #current
 * content.attachment.contentType = #application/fhir+json
 // This URL would be used to retrieve the content, and in this case that would be the given FHIR Bundle
-* content.attachment.url = "https://hl7.org/fhir/uv/ips/Bundle-IPS-examples-Bundle-01.json"
+* content.attachment.url = "{{site.data.fhir.hl7ips}}Bundle-IPS-examples-Bundle-01.json"
 //* content.attachment.url = "http://example.com/fhir/bundle-1.xml"
 * type = http://loinc.org#60591-5 "Patient summary Document"
 // class does not exist in this example, so replicate the type

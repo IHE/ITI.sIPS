@@ -6,13 +6,13 @@
 
 ## 3:5.9 International Patient Summary Content Module
 
-An [International Patient Summary (IPS) document](https://hl7.org/fhir/uv/ips/) is an electronic health record extract containing essential healthcare information about a subject of care.
+An [International Patient Summary (IPS) document]({{site.data.fhir.hl7ips}}) is an electronic health record extract containing essential healthcare information about a subject of care.
 As specified in EN ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it.
 It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country.
 
-The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. The [IPS document specification is published by HL7](https://hl7.org/fhir/uv/ips/).
+The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. The [IPS document specification is published by HL7]({{site.data.fhir.hl7ips}}).
 
-The IHE aIPS does not modify the [HL7 IPS](https://hl7.org/fhir/uv/ips/) specification, but provides for methods of making the IPS accessible and providing methods to communicate it using [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). The IPS, as a "current summary", is an excellent document for the ["On-Demand" capability of the Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#212-dynamic-documents) infrastructure. On-Demand is available in [XDS](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html#10) with [On-Demand Documents Option](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [XCA](https://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) with [On-Demand Documents Option](https://profiles.ihe.net/ITI/TF/Volume1/ch-18.html#18.2.4), and with [MHD/MHDS](https://profiles.ihe.net/ITI/MHD/index.html). Further details for IPS use of On-Demand are outlined below in section 3.9.2.1.2.
+The IHE aIPS does not modify the [HL7 IPS]({{site.data.fhir.hl7ips}}) specification, but provides for methods of making the IPS accessible and providing methods to communicate it using [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). The IPS, as a "current summary", is an excellent document for the ["On-Demand" capability of the Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#212-dynamic-documents) infrastructure. On-Demand is available in [XDS](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html#10) with [On-Demand Documents Option](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [XCA](https://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) with [On-Demand Documents Option](https://profiles.ihe.net/ITI/TF/Volume1/ch-18.html#18.2.4), and with [MHD/MHDS](https://profiles.ihe.net/ITI/MHD/index.html). Further details for IPS use of On-Demand are outlined below in section 3.9.2.1.2.
 
 The IPS document is composed by a set of robust, well-defined and potentially reusable sets of core data items (indicated as IPS library in the figure below). The tight focus of the IPS on unplanned care is in this case not a limitation, but, on the contrary, facilitates their potential re-use beyond the IPS scope.
 
@@ -23,7 +23,7 @@ The IPS document is composed by a set of robust, well-defined and potentially re
 
 ### 3:5.9.1 Referenced Standards
 
-- [International Patient Summary (IPS) document](https://hl7.org/fhir/uv/ips/)
+- [International Patient Summary (IPS) document]({{site.data.fhir.hl7ips}})
 
 ### 3:5.9.2 Document Sharing Metadata
 
@@ -61,11 +61,11 @@ This Content Module does not constrain the IPS content. For the definition of th
 
 ### 3:5.9.4 Examples
 
-Given the [IPS examples](https://hl7.org/fhir/uv/ips/examples.html) provided in the [IPS Implementation Guide](https://hl7.org/fhir/uv/ips), the following DocumentReference would be an example as Registered in Document Sharing. Submission Set and Folders are not shown as they are more dependent on the situation of the publication than the content itself.
+Given the [IPS examples]({{site.data.fhir.hl7ips}}examples.html) provided in the [IPS Implementation Guide](https://hl7.org/fhir/uv/ips), the following DocumentReference would be an example as Registered in Document Sharing. Submission Set and Folders are not shown as they are more dependent on the situation of the publication than the content itself.
 
 See example artifacts
 
-- [Example Bundle: IPS Bundle example](https://hl7.org/fhir/uv/ips/Bundle-IPS-examples-Bundle-01.html) 
+- [Example Bundle: IPS Bundle example]({{site.data.fhir.hl7ips}}Bundle-IPS-examples-Bundle-01.html) 
   - [Example DocumentReference for IPS Bundle in XML encoding](DocumentReference-ex-DocumentReference-Bundle-01-xml.html)
   - [Example DocumentReference for IPS Bundle in JSON encoding](DocumentReference-ex-DocumentReference-Bundle-01-json.html) with transform relationship to XML encoding.
 
