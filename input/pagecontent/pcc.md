@@ -766,11 +766,9 @@ Name</p>
 <p>The uniqueId is the unique id within the document.</p>
 </td>
 <td>
-<p>Composition.identifier</p>
-
+<p>Composition.identifier (business identifier)</p>
 <p>or</p>
-
-<p>Composition.id if no business identifier given</p>
+<p>full URI to the Composition if no business identifier given</p>
 </td>
 <td>
 <p>$docID &lt;= /ClinicalDocument/id</p>
