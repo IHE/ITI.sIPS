@@ -513,7 +513,6 @@ Affinity Domain specific ValueSet.</p>
 <td>
 <p>May be derived from Composition.author where the Reference is to an
 Organization</p>
-<p>Composition.author where</p>
 </td>
 <td>
 <p>Must be consistent with /clinicalDocument/code</p>
