@@ -37,11 +37,11 @@ dependencies:
   hl7.fhir.uv.ips:
     id: hl7ips
     uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
-    version: current
+    version: 1.0.x
   ihe.iti.mhd: 
     id: iheitimhd
     uri: https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd
-    version: 4.2.0
+    version: 4.2.x
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:

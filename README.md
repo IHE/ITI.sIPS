@@ -77,16 +77,27 @@ How many PCC approved CPs are there? The technical framework has not been update
 
 The acronym should be clearly "IPS", but needs to be distinct from the content definition from HL7 "IPS". Thus I used the word "access", which transformed into "accessibility". However the word "accessibility" has a perspective of human readability and understandability, especially with disabilities. The goal of the IG is to show how to access, communicate, publish the IPS content on existing Document Sharing (XDS, XCA, XDR, MHD, MHDS, etc) infrastructure. So, we need a new name:
 
+committee: 2023-7-26
+
+- **Sharing of IPS (sIPS)**
+
+not chosen
+
+- Sharing of IPS (S-IPS) 
+- Sharing of IPS (SIPS)
+- IPS Sharing (IPSS)
 - Accessibility of IPS (aIPS)
 - Access to IPS (aIPS)
-- IPS sharing (IPSS)
 - Mobile IPS (mIPS)
 - IPS Document Exchange (IPS-DX)
 - IPS Sharing: IPS-S to set a pattern for other document sharing and make the -S the known text for sharing
 - IPS Metadata (IPS-M): This is similar to Document Exchange but is more subtle. -M is probably a bad choice because that is to close to "m" for Mobile.
 - IPS Metadata (IPS Meta): So you can post your IPS on Facebook.
-- Exchanging IPS (eIPS)
-- eXchanging IPS (xIPS)
+- Exchanging IPS (EIPS)
+- eXchanging IPS (XIPS)
+- Sharing of IPS (S.IPS)
+- Document Sharing of IPS (DSIPS) (DS-IPS)
+- IPS Document Sharing (IPS-DS)
 
 ## Survey
 
