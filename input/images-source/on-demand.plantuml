@@ -1,0 +1,22 @@
+@startuml
+abstract  "DocumentReference 0" as od {
+On-Demand entry
+IPS Summary
+}
+abstract "DocumentReference 1" as sn1 {
+Stable entry
+IPS Summary
+January 1, 2023
+}
+abstract "DocumentReference 2" as sn2 {
+Stable entry
+IPS Summary
+July 1, 2023
+}
+entity "IPS 1 document" as i1
+entity "IPS 2 document" as i2
+od <-down- sn1 : Transform
+od <-down- sn2 : Transform
+sn1 -down-+ i1 : instance
+sn2 -down-+ i2 : instance
+@enduml

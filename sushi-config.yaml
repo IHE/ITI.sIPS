@@ -39,6 +39,7 @@ dependencies:
     uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
     version: 1.0.x
   ihe.iti.mhd: 
+  # Depend on MHD so that the DocumentReference examples have proper profiling
     id: iheitimhd
     uri: https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd
     version: 4.2.x
