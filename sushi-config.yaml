@@ -6,7 +6,7 @@ id: ihe.iti.sips
 canonical: https://profiles.ihe.net/ITI/sIPS
 version: 0.0.1-current
 name: IHE_ITI_sIPS
-title: "Sharing of IPS"
+title: "Sharing of IPS (sIPS)"
 description: Sharing of IPS (sIPS) - defines how HL7 FHIR IPS is communicated using IHE Document Sharing
 releaseLabel: ci-build
 #releaseLabel: Trial-Implementation
