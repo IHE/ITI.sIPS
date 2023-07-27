@@ -6,7 +6,7 @@ approved work item starting spring 2023
 
 ## CI Build
 
-[CI Build](http://build.fhir.org/ig/IHE/ITI.aIPS/branches/master/index.html)
+[CI Build](http://build.fhir.org/ig/IHE/ITI.sIPS/branches/master/index.html)
 
 ## ITI bi-weekly development call
 
@@ -28,7 +28,7 @@ This IG will cover minimally how the HL7 FHIR "IPS" IG compliant document is sha
 
 The audience of this IG is likely going to be bigger than the normal IHE Content Profile.
 
-- The audience will be directed here from joint work including ISO, CEN, SNOMED, and HL7. IHE is a part of this joint work, and has agreed to take responsibility for various capabilities, including that which the aIPS is covering.
+- The audience will be directed here from joint work including ISO, CEN, SNOMED, and HL7. IHE is a part of this joint work, and has agreed to take responsibility for various capabilities, including that which the sIPS is covering.
 - The audience may be new developers have limited understanding of FHIR, and Document Sharing
 - ONC in the USA, and other regulating bodies elsewhere need a specification they can require for conformance claims. (Thus a whitepaper is insufficient)
 - IHE-Connectathon desires a specification to drive the combination testing between Document Sharing and the IPS content
@@ -41,7 +41,7 @@ Today PCC does have an [IPS](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE
 
 ## Scope of work
 
-Given the above points, what should we include in aIPS? Minimally what is needed can be said in about 10 pages or less.  I am willing to author an Implementation Guide that meets a defined and demanded need.  I expect a very small IG that simply hooks HL7 IPS to IHE Document Sharing (XDS, XCA, XDR, XDM, MHD, MHDS), using existing Content Creator / Content Consumer actors that already support this binding.
+Given the above points, what should we include in sIPS? Minimally what is needed can be said in about 10 pages or less.  I am willing to author an Implementation Guide that meets a defined and demanded need.  I expect a very small IG that simply hooks HL7 IPS to IHE Document Sharing (XDS, XCA, XDR, XDM, MHD, MHDS), using existing Content Creator / Content Consumer actors that already support this binding.
 
 I propose that this focus on the [FHIR-Document encoding of IPS](http://hl7.org/fhir/uv/ips/). There is a [CDA encoding](https://art-decor.org/art-decor/decor-project--hl7ips-), but there is less market demand for that. With the FHIR IG we can have our IG depend-on the FHIR IPS to create a stronger linkage and provide us access to the profiles and examples in the HL7 IPS.
 
@@ -75,7 +75,7 @@ How many PCC approved CPs are there? The technical framework has not been update
 
 ### Name of the profile
 
-The acronym should be clearly "IPS", but needs to be distinct from the content definition from HL7 "IPS". Thus I used the word "access", which transformed into "accessibility". However the word "accessibility" has a perspective of human readability and understandability, especially with disabilities. The goal of the IG is to show how to access, communicate, publish the IPS content on existing Document Sharing (XDS, XCA, XDR, MHD, MHDS, etc) infrastructure. So, we need a new name:
+The acronym should be clearly "IPS", but needs to be distinct from the content definition from HL7 "IPS". The word "Sharing" helps link to IHE "Document Sharing" to show how to access, communicate, publish the IPS content on existing Document Sharing (XDS, XCA, XDR, MHD, MHDS, etc) infrastructure. 
 
 committee: 2023-7-26
 
@@ -83,11 +83,11 @@ committee: 2023-7-26
 
 not chosen
 
-- Sharing of IPS (S-IPS) 
-- Sharing of IPS (SIPS)
-- IPS Sharing (IPSS)
 - Accessibility of IPS (aIPS)
-- Access to IPS (aIPS)
+- Sharing of IPS (S-IPS)
+- IPS Sharing (IPSS)
+- Sharing of IPS (sIPS)
+- Access to IPS (sIPS)
 - Mobile IPS (mIPS)
 - IPS Document Exchange (IPS-DX)
 - IPS Sharing: IPS-S to set a pattern for other document sharing and make the -S the known text for sharing
@@ -104,4 +104,4 @@ not chosen
 1. Are you creating or consuming IPS?
 2. Are you communicating IPS over IHE Document Sharing (XDS, XCA, XDR, MHD, MHDS)?
 3. Are you aware of a developing IHE-Profile that shows how to communicate IPS over IHE Document Sharing?
-4. 
+

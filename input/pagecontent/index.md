@@ -1,5 +1,5 @@
 
-Accessibility of IPS (aIPS) - defines how HL7 [FHIR IPS](http://hl7.org/fhir/uv/ips/) is communicated using IHE [Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+Sharing of IPS (sIPS) - defines how HL7 [FHIR IPS](http://hl7.org/fhir/uv/ips/) is communicated using IHE [Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
 <div markdown="1" class="stu-note">
 

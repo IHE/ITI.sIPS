@@ -2,12 +2,12 @@
 # ───────────────────────────────────────────────────
 # the id should be lowercase made up of "ihe." + {domain acronym} + "." + {profile acronym/short-name}
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
-id: ihe.iti.aips
-canonical: https://profiles.ihe.net/ITI/aIPS
+id: ihe.iti.sips
+canonical: https://profiles.ihe.net/ITI/sIPS
 version: 0.0.1-current
-name: IHE_ITI_aIPS
-title: "Accessibility of IPS"
-description: Accessibility of IPS (aIPS) - defines how HL7 FHIR IPS is communicated using IHE Document Sharing
+name: IHE_ITI_sIPS
+title: "Sharing of IPS"
+description: Sharing of IPS (sIPS) - defines how HL7 FHIR IPS is communicated using IHE Document Sharing
 releaseLabel: ci-build
 #releaseLabel: Trial-Implementation
 #date: 2022-01-02
@@ -70,10 +70,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: 1:56 aIPS Home
+    title: 1:56 sIPS Home
     generation: markdown
   volume-1.md:
-    title: 1:56 aIPS Volume 1
+    title: 1:56 sIPS Volume 1
     generation: markdown
   content.md:
     title: 3:5.9 IPS Content Module

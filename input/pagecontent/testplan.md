@@ -13,7 +13,7 @@ And that Document Sharing has test plans, test procedures, test tools, and examp
 
 When IPS is communicated using Document Sharing
 
-Then the interaction between Document Sharing and IPS shall follow the aIPS Implementation Guide.
+Then the interaction between Document Sharing and IPS shall follow the sIPS Implementation Guide.
 
 ### Unit Test Procedure
 
