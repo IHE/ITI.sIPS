@@ -13,8 +13,18 @@ Stable entry
 IPS Summary
 July 1, 2023
 }
-entity "IPS 1 document" as i1
-entity "IPS 2 document" as i2
+entity "IPS 1 document" as i1 {
+    ~~~
+    ~~~
+    ~~~
+    ~~~
+}
+entity "IPS 2 document" as i2 {
+    ~~~
+    ~~~
+    ~~~
+    ~~~
+}
 od <-down- sn1 : Transform
 od <-down- sn2 : Transform
 sn1 -down-+ i1 : instance
