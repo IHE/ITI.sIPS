@@ -121,6 +121,16 @@ The Concepts of [Document Sharing Health Information Exchange](https://profiles.
 
 The Concepts of the [HL7 International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/index.html) are defined in the [HL7 Implementation Guide](http://hl7.org/fhir/uv/ips/index.html).
 
+The [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) infrastructures define a common set of Document Metadata, Submission Set, and Folders. There are [defined methods of communicating documents](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#3-document-sharing-profiles) including push, centralized registry, and federated discovery and retrieval. The metadata model is designed to be content agnostic so can support any past or future document specification, which enables all existing networks to support the IPS without modification.
+
+A Document Entry (aka FHIR DocumentReference) is metadata about a document. This metadata is designed to support provenance, lifecycle, authenticity, patient identity, privacy, and exchange of the document that is described. The document can be any kind of format, in this content module we are focused on the [International Patient Summary (IPS) document]({{site.data.fhir.hl7ips}}) and the format of JSON or XML. Submission Set is the metadata about the publication event, who published these documents, why, when, where, etc. The Folder is an adhoc grouping mechanism that can be used for purposes like grouping a clinical episode. Further explanation of the [Value of Metadata](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#26-value-of-metadata) is covered in the [HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+
+<figure>
+{%include on-demand.svg%}
+<figcaption><b>Figure 56.4.1-1: Example On-Demand relationship to snapshot Stable entries.</b></figcaption>
+</figure>
+<br clear="all">
+
 ### 56.4.2 Use Cases
 
 ### 56.4.2.1 Publishing IPS
