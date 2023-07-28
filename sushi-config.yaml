@@ -85,11 +85,11 @@ pages:
   other.md:
     title: Changes to Other Documents
     generation: markdown
-  download.md:
-    title: Download and Analysis
-    generation: markdown
   issues.md:
     title: Significant Changes & Issues
+    generation: markdown
+  download.md:
+    title: Download and Analysis
     generation: markdown
   pcc.md:
     title: PCC Volume 2 excerpt
