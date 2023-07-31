@@ -1,5 +1,5 @@
 
-Given that HL7 has published an [International Patient Summary, which is a FHIR-Document](http://hl7.org/fhir/uv/ips/), this Implementation Guide defines how to communicate and access the IPS using [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). This is an IHE Content Module as defined in the IHE Technical Frameworks [General Introduction](https://profiles.ihe.net/GeneralIntro/). This Implementation Guide does not further refine the IPS, and thus any document conforming to the [HL7 base IPS specification]({{site.data.fhir.hl7ips}}) is applicable here.
+Given that HL7 has published an [International Patient Summary, which is a FHIR-Document]({{site.data.fhir.hl7ips}}), this Implementation Guide defines how to communicate and access the IPS using [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). This is an IHE Content Module as defined in the IHE Technical Frameworks [General Introduction](https://profiles.ihe.net/GeneralIntro/). This Implementation Guide does not further refine the IPS, and thus any document conforming to the [HL7 base IPS specification]({{site.data.fhir.hl7ips}}) is applicable here.
 
 An [International Patient Summary (IPS) document]({{site.data.fhir.hl7ips}}) is an electronic health record extract containing essential healthcare information about a subject of care.
 As specified in EN ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it.
@@ -36,7 +36,7 @@ The actors in this profile are described in more detail in the sections below.
 
 #### 56.1.1.1 Content Creator
 
-The [Content Creator](pcc.html#31-document-sharing-pcc-1) creates the [IPS content](http://hl7.org/fhir/uv/ips/) and shares it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+The [Content Creator](pcc.html#31-document-sharing-pcc-1) creates the [IPS content]({{site.data.fhir.hl7ips}}) and shares it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
 FHIR Capability Statement for [Content Creator](CapabilityStatement-IHE.sIPS.ContentCreator.html)
 
@@ -47,7 +47,7 @@ The HL7 IPS is mapped to the [Document Sharing Metadata according to PCC Volume 
 
 #### 56.1.1.2 Content Consumer
 
-The [Content Consumer](pcc.html#31-document-sharing-pcc-1) consumes the [IPS content](http://hl7.org/fhir/uv/ips/) and obtains it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+The [Content Consumer](pcc.html#31-document-sharing-pcc-1) consumes the [IPS content]({{site.data.fhir.hl7ips}}) and obtains it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
 FHIR Capability Statement for [Content Consumer](CapabilityStatement-IHE.sIPS.ContentConsumer.html)
 
@@ -55,7 +55,7 @@ The HL7 IPS is mapped to the [Document Sharing Metadata according to PCC Volume 
 
 #### 56.1.2 IPS Content
 
-The Content Creator and Content Consumer share the [IPS content](http://hl7.org/fhir/uv/ips/) using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+The Content Creator and Content Consumer share the [IPS content]({{site.data.fhir.hl7ips}}) using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
 The HL7 IPS is mapped to the [Document Sharing Metadata according to PCC Volume 2: 4.1](pcc.html#4-ihe-patient-care-coordination-bindings). This shows how to map the FHIR Composition resource elements into XDS/XDM/XDR/XCA [Document Entry](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2) and MHD [FHIR DocumentReference](https://profiles.ihe.net/ITI/MHD/32_fhir_maps.html) elements.
 
@@ -113,13 +113,13 @@ Document Sharing [Health Information Exchange Whitepaper](https://profiles.ihe.n
 
 ## 56.4 sIPS Overview
 
-This Implementation Guide simply hooks [HL7 IPS](http://hl7.org/fhir/uv/ips/index.html) to IHE [Document Sharing (XDS, XCA, XDR, XDM, MHD, MHDS)](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html), using existing Content Creator / Content Consumer actors that already support this binding.
+This Implementation Guide simply hooks [HL7 IPS]({{site.data.fhir.hl7ips}}/index.html) to IHE [Document Sharing (XDS, XCA, XDR, XDM, MHD, MHDS)](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html), using existing Content Creator / Content Consumer actors that already support this binding.
 
 ### 56.4.1 Concepts
 
 The Concepts of [Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) are defined in the [IHE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html), and [ITI Profiles](https://profiles.ihe.net/ITI/).
 
-The Concepts of the [HL7 International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/index.html) are defined in the [HL7 Implementation Guide](http://hl7.org/fhir/uv/ips/index.html).
+The Concepts of the [HL7 International Patient Summary (IPS)]({{site.data.fhir.hl7ips}}/index.html) are defined in the [HL7 Implementation Guide]({{site.data.fhir.hl7ips}}/index.html).
 
 The [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) infrastructures define a common set of Document Metadata, Submission Set, and Folders. There are [defined methods of communicating documents](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#3-document-sharing-profiles) including push, centralized registry, and federated discovery and retrieval. The metadata model is designed to be content agnostic so can support any past or future document specification, which enables all existing networks to support the IPS without modification.
 

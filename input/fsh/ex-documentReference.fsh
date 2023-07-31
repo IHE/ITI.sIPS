@@ -7,7 +7,7 @@ Description: """
 Example of a Comprehensive DocumentReference resource.
 
 - This is for the XML encoding
-- Where the IPS Bundle is [the IPS examples 01]({{site.data.fhir.hl7ips}}Bundle-IPS-examples-Bundle-01.html) 
+- Where the IPS Bundle is [the IPS examples 01]({{site.data.fhir.hl7ips}}/Bundle-IPS-examples-Bundle-01.html) 
 - This is fully filled for all mandatory elements.
 - IPS has multiple authenticators, XDS DocumentEntry has only one available
 - IPS does not have a class, Comprehensive requires a category - replicated the type.
@@ -25,7 +25,7 @@ Usage: #example
 * status = #current
 * content.attachment.contentType = #application/fhir+xml
 // This URL would be used to retrieve the content, and in this case that would be the given FHIR Bundle
-* content.attachment.url = "{{site.data.fhir.hl7ips}}Bundle-IPS-examples-Bundle-01.xml"
+* content.attachment.url = "{{site.data.fhir.hl7ips}}/Bundle-IPS-examples-Bundle-01.xml"
 //* content.attachment.url = "http://example.com/fhir/bundle-1.xml"
 * type = http://loinc.org#60591-5 "Patient summary Document"
 // class does not exist in this example, so replicate the type
@@ -60,7 +60,7 @@ Description: """
 Example of a Comprehensive DocumentReference resource.
 
 - This is for the JSON encoding. Links in Transform relationship to the XML encoded form.
-- Where the IPS Bundle is [the IPS examples 01]({{site.data.fhir.hl7ips}}Bundle-IPS-examples-Bundle-01.html) 
+- Where the IPS Bundle is [the IPS examples 01]({{site.data.fhir.hl7ips}}/Bundle-IPS-examples-Bundle-01.html) 
 - This is fully filled for all mandatory elements.
 - IPS has multiple authenticators, XDS DocumentEntry has only one available
 - IPS does not have a class, Comprehensive requires a category - replicated the type.
@@ -78,7 +78,7 @@ Usage: #example
 * status = #current
 * content.attachment.contentType = #application/fhir+json
 // This URL would be used to retrieve the content, and in this case that would be the given FHIR Bundle
-* content.attachment.url = "{{site.data.fhir.hl7ips}}Bundle-IPS-examples-Bundle-01.json"
+* content.attachment.url = "{{site.data.fhir.hl7ips}}/Bundle-IPS-examples-Bundle-01.json"
 //* content.attachment.url = "http://example.com/fhir/bundle-1.xml"
 * type = http://loinc.org#60591-5 "Patient summary Document"
 // class does not exist in this example, so replicate the type

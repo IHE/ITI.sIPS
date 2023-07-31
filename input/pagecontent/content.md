@@ -46,7 +46,7 @@ The FormatCode shall be `{{site.data.fhir.hl7ips}}/StructureDefinition/Bundle-uv
 
 When the Document Source is willing to offer to Document Consumers the ability for an on on-demand instance of the IPS to be returned using current data, it can register a [Document Entry (DocumentReference) as "On-Demand"](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#212-dynamic-documents). XDS and XCA the On-Demand entry is indicated with a given On-Demand ObjectType as expressed in the given options, in MHD/MHDS an On-Demand entry is indicated with an absent .size and .hash. The Document Entry (DocumentReference) will express specific parameters that would be used if the Document Consumer were to request a document be created "On-Demand"; such as timeperiod refinements, setting, language, etc.
 
-When the On-Demand entry is requested by a Document Consumer, the responding actor may chose to utilize the [IPS $summary operation]({{site.data.fhir.hl7ips}}/OperationDefinition-summary.html). This use of the [$summary operation]({{site.data.fhir.hl7ips}}OperationDefinition-summary.html) is not required to be the method used. The [IPS $summary operation]({{site.data.fhir.hl7ips}}OperationDefinition-summary.html) being invoked in this way uses the Document Sharing network to enable very remote clients, such as those many XCA communities away. Note that the [IPS $summary operation]({{site.data.fhir.hl7ips}}/OperationDefinition-summary.html) may be used in other Implementation Guides more directly by a http client.
+When the On-Demand entry is requested by a Document Consumer, the responding actor may chose to utilize the [IPS $summary operation]({{site.data.fhir.hl7ips}}/OperationDefinition-summary.html). This use of the [$summary operation]({{site.data.fhir.hl7ips}}/OperationDefinition-summary.html) is not required to be the method used. The [IPS $summary operation]({{site.data.fhir.hl7ips}}/OperationDefinition-summary.html) being invoked in this way uses the Document Sharing network to enable very remote clients, such as those many XCA communities away. Note that the [IPS $summary operation]({{site.data.fhir.hl7ips}}/OperationDefinition-summary.html) may be used in other Implementation Guides more directly by a http client.
 
 The returned document would, based on configuration, result in an additional DocumentEntry/DocumentReference (aka Snapshot) existing that is in transforms relationship with the On-Demand DocumentEntry/DocumentReference, and representing the returned document metadata. This snapshot is a "stable" instance that can be retrieved again in the future. More discussion of the relationship between the on-demand and the instances that are preserved as snapshots is explain in [HIE Whitepaper: Dynamic Documents](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#212-dynamic-documents).
 
@@ -72,11 +72,10 @@ This Content Module does not constrain the IPS content. For the definition of th
 
 ### 3:5.9.4 Examples
 
-Given the [IPS examples]({{site.data.fhir.hl7ips}}examples.html) provided in the [IPS Implementation Guide](https://hl7.org/fhir/uv/ips), the following DocumentReference would be an example as Registered in Document Sharing. Submission Set and Folders are not shown as they are more dependent on the situation of the publication than the content itself.
+Given the [IPS examples]({{site.data.fhir.hl7ips}}/examples.html) provided in the [IPS Implementation Guide]({{site.data.fhir.hl7ips}}), the following DocumentReference would be an example as Registered in Document Sharing. Submission Set and Folders are not shown as they are more dependent on the situation of the publication than the content itself.
 
 See example artifacts
 
-- [Example Bundle: IPS Bundle example]({{site.data.fhir.hl7ips}}Bundle-IPS-examples-Bundle-01.html) 
+- [Example Bundle: IPS Bundle example]({{site.data.fhir.hl7ips}}/Bundle-IPS-examples-Bundle-01.html)
   - [Example DocumentReference for IPS Bundle in XML encoding](DocumentReference-ex-DocumentReference-Bundle-01-xml.html)
   - [Example DocumentReference for IPS Bundle in JSON encoding](DocumentReference-ex-DocumentReference-Bundle-01-json.html) with transform relationship to XML encoding.
-
