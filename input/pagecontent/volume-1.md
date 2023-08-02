@@ -13,7 +13,7 @@ The IPS document is composed by a set of robust, well-defined and potentially re
 
 <figure>
 <img alt="mXDE Flow from Documents to Resources" src="IPS_doc_library.png" width="70%">
-<figcaption><b>1:56-1: The IPS Product and By-products</b></figcaption>
+<figcaption><b>Figure 1:56-1: The IPS Product and By-products</b></figcaption>
 </figure>
 <br clear="all">
 
@@ -129,7 +129,7 @@ A Document Entry (aka FHIR DocumentReference) is metadata about a document. This
 
 <figure>
 {%include on-demand.svg%}
-<figcaption><b>Figure 1:56.4.1-1: Example On-Demand Relationship to Snapshot Stable Entries.</b></figcaption>
+<figcaption><b>Figure 1:56.4.1-1: Example On-Demand Relationship to Snapshot Stable Entries</b></figcaption>
 </figure>
 <br clear="all">
 
