@@ -3,12 +3,12 @@
 
 ### Version 1.0.0-comment
 
-- First Public-Comment
+- First Public Comment
 - Previously named Accessibility to IPS (aIPS). Name was changed due to potential misunderstanding of other meanings of accessibility around user experience with disability.
 
 ### Relationship of sIPS to PCC-IPS
 
-The [PCC-IPS](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf) is being broken up into distinct Profiles starting with the sIPS Implementation Guide (Profile). Other parts of [PCC-IPS](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf) are expected to be published in the coming months and years as resources become available. The sIPS takes precedence over equivalent profiling found in the [PCC-IPS](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf) however those parts of the [PCC-IPS](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf) that have not been published in other forms are still relevant.
+The [PCC-IPS](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf) is being broken up into distinct profiles starting with the sIPS Implementation Guide (Profile). Other parts of [PCC-IPS](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf) are expected to be published in the coming months and years as resources become available. The sIPS takes precedence over equivalent profiling found in the [PCC-IPS](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf); however, those parts of the [PCC-IPS](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf) that have not been published in other forms are still relevant.
 
 ## Issues
 

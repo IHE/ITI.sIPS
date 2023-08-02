@@ -68,7 +68,7 @@ No additional requirements. For more information, see [PCC TF-2: 4.1.1.3](pcc.ht
 
 ### 3:5.9.3 Specification
 
-This Content Module does not constrain the IPS content. For the definition of the [IPS content as defined by HL7]({{site.data.fhir.hl7ips}})
+This Content Module does not constrain the IPS content. For the definition of the [IPS content as defined by HL7]({{site.data.fhir.hl7ips}}).
 
 ### 3:5.9.4 Examples
 
@@ -78,4 +78,4 @@ See example artifacts
 
 - [Example Bundle: IPS Bundle example]({{site.data.fhir.hl7ips}}/Bundle-IPS-examples-Bundle-01.html)
   - [Example DocumentReference for IPS Bundle in XML encoding](DocumentReference-ex-DocumentReference-Bundle-01-xml.html)
-  - [Example DocumentReference for IPS Bundle in JSON encoding](DocumentReference-ex-DocumentReference-Bundle-01-json.html) with transform relationship to XML encoding.
+  - [Example DocumentReference for IPS Bundle in JSON encoding](DocumentReference-ex-DocumentReference-Bundle-01-json.html) with transform relationship to XML encoding

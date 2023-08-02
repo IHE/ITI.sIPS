@@ -184,10 +184,10 @@ DocumentReference can be found in the FHIR core in both Composition and
 DocumentReference. However, this mapping is only between Composition and
 DocumentReference. See
 <http://hl7.org/fhir/composition-mappings.html#fhirdocumentreference> ;
-<http://hl7.org/fhir/documentreference-mappings.html#fhircomposition>
+<http://hl7.org/fhir/documentreference-mappings.html#fhircomposition>.
 
 For a mapping between DocumentReferenece and XDS DocumentEntry
-attributes see <http://hl7.org/fhir/documentreference-mappings.html#xds>
+attributes see <http://hl7.org/fhir/documentreference-mappings.html#xds>.
 
 Additionally, below in table 4.1.1 is a mapping between FHIR Document
 Composition elements and the XDS DocumentEntry attributes.
@@ -205,9 +205,9 @@ should identify the transactions and content to which it applies.
 The source for all required and optional attributes have been defined in
 the bindings below. Two tables describe the XDS object
 types: XDSDocumentEntry, and XDSSubmissionSet.
-The definitions of the [metadata attributes is defined in ITI Volume 3:4](https://profiles.ihe.net/ITI/TF/Volume3/index.html#4), with the [optionality defined in ITI Volume 3:4.3](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.3.html#4.3)
+The definitions of the [metadata attributes is defined in ITI Volume 3:4](https://profiles.ihe.net/ITI/TF/Volume3/index.html#4), with the [optionality defined in ITI Volume 3:4.3](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.3.html#4.3).
 For a mapping between DocumentReferenece and XDS DocumentEntry
-attributes see <http://hl7.org/fhir/documentreference-mappings.html#xds>
+attributes see <http://hl7.org/fhir/documentreference-mappings.html#xds>.
 
 ## 4.1 Medical Document Binding to Document Sharing Metadata
 
@@ -220,7 +220,7 @@ registry. The other sources of information include the configuration of
 the Document Source Actor, the XDS Affinity Domain, the site or
 facility, local agreements, other documents in the registry/repository,
 and this Content Profile. 
-See [Overview of Health Document Sharing Communities](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#13-overview-of-health-document-sharing-communities)
+See [Overview of Health Document Sharing Communities](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#13-overview-of-health-document-sharing-communities).
 
 In many cases, the [CDA/FHIR document](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#231-fhir-document-vs-cda-document) is created for the purposes of sharing
 within an XDS Affinity Domain. In these cases the context of the [CDA/FHIR Document](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#231-fhir-document-vs-cda-document) and
@@ -231,7 +231,7 @@ In other cases, the [CDA/FHIR document](https://profiles.ihe.net/ITI/HIE-Whitepa
 and are subsequently being shared. In these cases the context of the [CDA/FHIR document](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#231-fhir-document-vs-cda-document) 
 would not necessarily coincide with that of the XDS Affinity
 Domain, and the mappings below would not necessarily apply.
-See [Principles of IHE for Health Document sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#2-principles-of-ihe-for-health-document-sharing)
+See [Principles of IHE for Health Document sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#2-principles-of-ihe-for-health-document-sharing).
 
 Please note the specifics given in the table below.
 
