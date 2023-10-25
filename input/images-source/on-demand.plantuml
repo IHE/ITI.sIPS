@@ -25,8 +25,8 @@ entity "IPS 2 document" as i2 {
     ~~~
     ~~~
 }
-od <-down- sn1 : Transform
-od <-down- sn2 : Transform
+od <-down- sn1 : snapshot
+od <-down- sn2 : snapshot
 sn1 -down-+ i1 : instance
 sn2 -down-+ i2 : instance
 @enduml
