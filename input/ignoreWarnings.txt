@@ -2,4 +2,5 @@
 # instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
 
 
-
+# known 
+Reference to draft item http://hl7.org/fhir/document-reference-status|4.0.1
