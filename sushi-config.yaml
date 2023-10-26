@@ -4,14 +4,14 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.iti.sips
 canonical: https://profiles.ihe.net/ITI/sIPS
-version: 1.0.0-comment
+version: 1.0.0
 name: IHE_ITI_sIPS
 title: "Sharing of IPS (sIPS)"
 description: Sharing of IPS (sIPS) - defines how HL7 FHIR IPS is communicated using IHE Document Sharing
 #releaseLabel: ci-build
-#releaseLabel: Trial-Implementation
-releaseLabel: ballot
-date: 2023-08-04
+releaseLabel: Trial-Implementation
+#releaseLabel: ballot
+date: 2023-11-01
 status: active
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page

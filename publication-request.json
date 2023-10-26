@@ -1,19 +1,14 @@
 {
     "package-id" : "ihe.iti.sips",
-    "version" : "1.0.0-comment",
-    "path" : "https://profiles.ihe.net/ITI/sIPS/1.0.0-comment",
+    "version" : "1.0.0",
+    "path" : "https://profiles.ihe.net/ITI/sIPS/1.0.0",
     "mode" : "milestone",
-    "status" : "ballot",
+    "status" : "trial-use",
     "sequence" : "Publication",
-    "desc" : "First Public-Comment",
-    "descmd" : "Version 1.0.0-comment
+    "desc" : "Trial-Implementation resolving public-comments",
+    "descmd" : "Version 1.0.0
 
-- First Public-Comment
-- Previously named Accessibility to IPS (aIPS). Name was changed due to potential misunderstanding of other meanings of accessibility around user experience with disability.",
-    "changes" : "issues.html",
-    "first" : true,
-    "title" : "Sharing of IPS (sIPS)",
-    "ci-build" : "http://build.fhir.org/ig/IHE/ITI.sIPS/branches/master/index.html",
-    "category" : "Clinical Documents",
-    "introduction" : "defines how HL7 FHIR IPS is communicated using IHE Document Sharing"
+- Trial-Implementation
+- resolved public-comments",
+    "changes" : "issues.html"
   }
