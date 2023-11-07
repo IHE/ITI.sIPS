@@ -175,7 +175,7 @@ JSON document which may be signed and managed as required. Please see
 <http://hl7.org/fhir/documents.html>;
 [http://hl7.org/fhir/bundle.html#document](http://hl7.org/fhir/bundle.html%23document).
 
-A Bundle of type “document” is a RESTful object that is not updated, it
+A Bundle of type "document" is a RESTful object that is not updated, it
 is just retrievable. See <http://hl7.org/fhir/bundle.html#rest> . When a
 Bundle is placed into the control of Document Sharing (e.g. XDS, MHD,
 XCA, XDM, etc) it is retrieved in the Bundle form as a document given
