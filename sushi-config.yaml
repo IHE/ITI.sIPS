@@ -11,7 +11,7 @@ description: Sharing of IPS (sIPS) - defines how HL7 FHIR IPS is communicated us
 #releaseLabel: ci-build
 releaseLabel: Trial-Implementation
 #releaseLabel: ballot
-date: 2023-11-01
+date: 2023-11-17
 status: active
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page
