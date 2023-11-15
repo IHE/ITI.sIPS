@@ -24,9 +24,9 @@ This guide is organized into the following sections:
   - [IPS Content Module](content.html)
 - [Artifacts](artifacts.html)
 - Other
-  - [Test Plan](testplan.html)
   - [Changes to Other IHE Specifications](other.html)
   - [Download and Analysis](download.html)
+  - [Test Plan](testplan.html)
 - PCC Excerpt
   - [Volume 2:3.1 PCC-1](pcc.html)
   - [Volume 2:4.1 Metadata Mapping](pcc.html)
