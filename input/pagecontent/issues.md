@@ -1,9 +1,9 @@
 
 ## Significant Changes
 
-### Version 1.0.0-comment
+### Version 1.0.0
 
-- First Public Comment
+- First Trial Implementation Version
 - Previously named Accessibility to IPS (aIPS). Name was changed due to potential misunderstanding of other meanings of accessibility around user experience with disability.
 
 ### Relationship of sIPS to PCC-IPS
@@ -26,4 +26,4 @@ It is important to note that as soon as a Change Proposal is approved, it carrie
 
 ### Closed Issues
 
-none
+None
