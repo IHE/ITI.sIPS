@@ -26,13 +26,13 @@ The IPS document is composed by a set of robust, well-defined and potentially re
 
 ### 3:5.9.2 Document Sharing Metadata
 
-The [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) infrastructures define a common set of Document Metadata, Submission Set, and Folders. There are [defined methods of communicating documents](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#3-document-sharing-profiles) including push, centralized registry, and federated discovery and retrieval. The metadata model is designed to be content agnostic so can support any past or future document specification, which enables all existing networks to support the IPS without modification.
+The [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) infrastructures define a common set of Document Metadata, Submission Set, and Folders. There are [defined methods of communicating documents](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#3-document-sharing-profiles) including push, centralized registry, and federated discovery and retrieval. The metadata model is designed to be content agnostic so it can support any past or future document specification, which enables all existing networks to support the IPS without modification.
 
 A Document Entry (aka FHIR DocumentReference) is metadata about a document. This metadata is designed to support provenance, lifecycle, authenticity, patient identity, privacy, and exchange of the document that is described. The document can be any kind of format, in this content module we are focused on the [International Patient Summary (IPS) document]({{site.data.fhir.hl7ips}}) and the format of JSON or XML. Submission Set is the metadata about the publication event, who published these documents, why, when, where, etc. The Folder is an adhoc grouping mechanism that can be used for purposes like grouping a clinical episode. Further explanation of the [Value of Metadata](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#26-value-of-metadata) is covered in the [HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
-There is a limitation in the Document Sharing metadata that each Document entry must have only one mime-type. The FHIR model supports many mime-type encodings, as does IPS. Some environments may choose one of the FHIR mime-type encodings, where others may need both JSON and XML mime-type encoding of the IPS document bundle. Where more than one mime-type encoding is needed one would need to register multiple Document entries and [indicate they are transforms](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#27-document-relationships) only differing in mime-type. With multiple Document entries registered, the Document Consumer can pick the mime-type desired, and with the [transform relationship](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#27-document-relationships) be confident that there is no semantic difference between the two mime-type encodings.
+There is a limitation in the Document Sharing metadata that each Document entry must have only one mime-type. The FHIR model supports many mime-type encodings, as does IPS. Some environments may choose one of the FHIR mime-type encodings, where others may need both JSON and XML mime-type encoding of the IPS document bundle. Where more than one mime-type encoding is needed, one would need to register multiple Document entries and [indicate they are transforms](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#27-document-relationships) only differing in mime-type. With multiple Document entries registered, the Document Consumer can pick the mime-type desired, and with the [transform relationship](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#27-document-relationships) be confident that there is no semantic difference between the two mime-type encodings.
 
-To fill out a Document Entry there is a mapping table [PCC TF-2: 4.1.1](pcc.html) that provides guidance. The mapping to a FHIR DocumentReference from the document FHIR Composition is the same as is found in the [FHIR Core DocumentReference Mapping from Composition](http://hl7.org/fhir/R4/documentreference-mappings.html#fhircomposition), the [PCC TF-2: 4.1.1](pcc.html) provides additional guidance.
+To fill out a Document Entry there is a mapping table at [PCC TF-2: 4.1.1](pcc.html) that provides guidance. The mapping to a FHIR DocumentReference from the document FHIR Composition is the same as is found in the [FHIR Core DocumentReference Mapping from Composition](http://hl7.org/fhir/R4/documentreference-mappings.html#fhircomposition). [PCC TF-2: 4.1.1](pcc.html) provides additional guidance.
 
 #### 3:5.9.2.1 DocumentEntry/DocumentReference Metadata
 
@@ -52,7 +52,7 @@ The returned document would, based on configuration, result in an additional Doc
 
 When a document is produced on-demand, it is typical for this to be created by software without a human interaction. A summary often includes rules such as timeframe of content to include, thus the software is indeed crafting the Composition content; thus it is not just assembling a Bundle based on the pre-authored Composition. A software author of a document can be expressed using a FHIR Device Resource.
 
-The following figure shows one On-Demand Document Entry (DocumentReference), and two instances that have been requested and preserved as snapshots with a snapshot relationship.
+The following figure shows one On-Demand Document Entry (DocumentReference) and two instances that have been requested and preserved as snapshots with a snapshot relationship.
 
 <figure>
 {%include on-demand.svg%}
@@ -70,7 +70,7 @@ No additional requirements. For more information, see [PCC TF-2: 4.1.1.3](pcc.ht
 
 ### 3:5.9.3 Specification
 
-This Content Module does not constrain the IPS content. For the definition of the [IPS content as defined by HL7]({{site.data.fhir.hl7ips}}).
+This Content Module does not constrain the IPS content. See [IPS content as defined by HL7]({{site.data.fhir.hl7ips}}) for the definition of the IPS content as defined by HL7.
 
 ### 3:5.9.4 Examples
 
