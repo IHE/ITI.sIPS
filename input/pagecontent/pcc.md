@@ -1,6 +1,6 @@
 
 |------------------------------------------------|
-| Editor, the following is an excerpt from [PCC Volume 2](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol2.pdf): It is provided here for convenience to the reader and is not intended to be different. It does have CP-PCC-0300 integrated. |
+|The following is an excerpt from [PCC Volume 2](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol2.pdf): It is provided here for convenience to the reader and is not intended to be different. It does have CP-PCC-0300 integrated. |
 {:.grid .bg-info}
 
 
@@ -69,7 +69,7 @@ requirements.
 
 A Content Consumer that supports the View Option:
 
-1.  SHALL render the document for viewing.
+1. SHALL render the document for viewing.
 
 When a CDA Document is used, this rendering shall meet the requirements
 defined for CDA Release 2 content presentation semantics (See Section
@@ -177,19 +177,19 @@ JSON document which may be signed and managed as required. Please see
 
 A Bundle of type "document" is a RESTful object that is not updated, it
 is just retrievable. See <http://hl7.org/fhir/bundle.html#rest> . When a
-Bundle is placed into the control of Document Sharing (e.g. XDS, MHD,
+Bundle is placed into the control of Document Sharing (e.g., XDS, MHD,
 XCA, XDM, etc) it is retrieved in the Bundle form as a document given
 the Document Sharing metadata. The mapping from Composition to
 DocumentReference can be found in the FHIR core in both Composition and
 DocumentReference. However, this mapping is only between Composition and
 DocumentReference. See
-<http://hl7.org/fhir/composition-mappings.html#fhirdocumentreference> ;
+<http://hl7.org/fhir/composition-mappings.html#fhirdocumentreference>; 
 <http://hl7.org/fhir/documentreference-mappings.html#fhircomposition>.
 
 For a mapping between DocumentReferenece and XDS DocumentEntry
 attributes see <http://hl7.org/fhir/documentreference-mappings.html#xds>.
 
-Additionally, below in table 4.1.1 is a mapping between FHIR Document
+Additionally, below in Table 4.1.1 is a mapping between FHIR Document
 Composition elements and the XDS DocumentEntry attributes.
 
 # 4 IHE Patient Care Coordination Bindings

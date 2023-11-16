@@ -1,5 +1,5 @@
 
-The Sharing of IPS (sIPS) IHE Profile provides for methods of exchanging the [HL7 International Patient Summary (IPS)]({{site.data.fhir.hl7ips}}), using [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) but does not modify the [HL7 IPS]({{site.data.fhir.hl7ips}}) specification. The [International Patient Summary (IPS)]({{site.data.fhir.hl7ips}}) content, as defined in the [ISO 27269](https://www.iso.org/standard/79491.html) data model specification, utilizes IHE's [document sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) infrastructure including cross-community, HIE, direct exchange models, and more. It has been designed specifically to remove barriers to adoption, by leveraging architectures that are currently implemented, well-established, and robust. The sIPS Profile provides implementation guidance to vendors and implementers and joins a growing suite of IPS standards artefacts contributed by a variety of [Standards Development Organizations (SDOs)](https://international-patient-summary.net/) and coordinated by the [Joint Initiative Council for Global Health Informatics Standardization (JIC)](http://jointinitiativecouncil.org/).
+The Sharing of IPS (sIPS) IHE Profile provides for methods of exchanging the [HL7 International Patient Summary (IPS)]({{site.data.fhir.hl7ips}}), using [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) but does not modify the [HL7 IPS]({{site.data.fhir.hl7ips}}) specification. The [International Patient Summary (IPS)]({{site.data.fhir.hl7ips}}) content, as defined in the [ISO 27269](https://www.iso.org/standard/79491.html) data model specification, utilizes IHE's [document sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) infrastructure including cross-community, HIE, direct exchange models, and more. It has been designed specifically to remove barriers to adoption, by leveraging architectures that are currently implemented, well-established, and robust. The sIPS Profile provides implementation guidance to vendors and implementers and joins a growing suite of IPS standards artifacts contributed by a variety of [Standards Development Organizations (SDOs)](https://international-patient-summary.net/) and coordinated by the [Joint Initiative Council for Global Health Informatics Standardization (JIC)](http://jointinitiativecouncil.org/).
 
 An [HL7 IPS]({{site.data.fhir.hl7ips}}) document is an electronic health record extract, taken at a point in time, containing essential healthcare information about a subject of care. It is designed for supporting the use case scenario for planned and unplanned, cross border care. Although it is intended to be used across international borders, it is equally useful to exchange information across any jurisdictional border, including those within a particular region or country. The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent but still clinically relevant. The [HL7 IPS]({{site.data.fhir.hl7ips}}) specification is composed of a set of robust, well-defined and potentially reusable sets of core data items (indicated as the IPS library in the figure below).
 
@@ -58,7 +58,7 @@ FHIR Capability Statement for [Content Consumer](CapabilityStatement-IHE.sIPS.Co
 
 The HL7 IPS is mapped to the [Document Sharing Metadata according to PCC Volume 2: 4.1](pcc.html#4-ihe-patient-care-coordination-bindings). This shows how to map the FHIR Composition resource elements into XDS/XDM/XDR/XCA [Document Entry](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2) and MHD [FHIR DocumentReference](https://profiles.ihe.net/ITI/MHD/32_fhir_maps.html) elements.
 
-#### 1:56.1.2 IPS Content
+### 1:56.1.2 IPS Content
 
 The Content Creator and Content Consumer share the [IPS content]({{site.data.fhir.hl7ips}}) using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
@@ -151,9 +151,9 @@ Then I need to have clear specification on how I express in Document Sharing the
 Note: the above use-case is written in [Gherkin](https://cucumber.io/docs/gherkin/), a use-case language optimized for automated testing.
 
 See further discussion:
-- General explaination of [Centralized Discovery and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#32-centralized-discovery-and-retrieve)
-- General explaination of [Federated Discover and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#33-federated-discovery-and-retrieve)
-- General explaination of [Document Publishing in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#321-document-publishing)
+- General explanation of [Centralized Discovery and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#32-centralized-discovery-and-retrieve)
+- General explanation of [Federated Discover and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#33-federated-discovery-and-retrieve)
+- General explanation of [Document Publishing in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#321-document-publishing)
 
 ### 1:56.4.2.2  Making On-Demand Access to IPS Available
 
@@ -166,9 +166,9 @@ Then I need to have clear specification on how I express in Document Sharing the
 ```
 
 See further discussion:
-- General explaination of [Centralized Discovery and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#32-centralized-discovery-and-retrieve)
-- General explaination of [Federated Discover and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#33-federated-discovery-and-retrieve)
-- General explaination of [Dynamic Documents in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#212-dynamic-documents)
+- General explanation of [Centralized Discovery and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#32-centralized-discovery-and-retrieve)
+- General explanation of [Federated Discover and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#33-federated-discovery-and-retrieve)
+- General explanation of [Dynamic Documents in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#212-dynamic-documents)
 - Content Module specific for IPS On-Demand - [3:5.9.2.1.2 On-Demand](content.html#359212-on-demand)
 
 ### 1:56.4.2.3  Retrieving an IPS
@@ -181,9 +181,9 @@ Then I need to have clear specification on how I use Document Sharing to find FH
 ```
 
 See further discussion:
-- General explaination of [Centralized Discovery and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#32-centralized-discovery-and-retrieve)
-- General explaination of [Federated Discover and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#33-federated-discovery-and-retrieve)
-- General explaination of [Document Discovery and retrival in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#322-document-discovery)
+- General explanation of [Centralized Discovery and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#32-centralized-discovery-and-retrieve)
+- General explanation of [Federated Discover and Retrieve in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#33-federated-discovery-and-retrieve)
+- General explanation of [Document Discovery and retrieval in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#322-document-discovery)
 
 ### 1:56.4.2.4  Pushing an IPS to a Recipient
 
@@ -195,7 +195,7 @@ Then I need to have clear specification on how I use Document Sharing to find FH
 ```
 
 See further discussion:
-- General explaination of [PUSH model of Document Sharing in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#31-push)
+- General explanation of [PUSH model of Document Sharing in the HIE Whitepaper](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#31-push)
 
 <a name="security-considerations"> </a>
 

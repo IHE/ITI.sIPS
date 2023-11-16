@@ -71,7 +71,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: Sharing of IPS (sIPS)
+    title: Sharing of IPS (sIPS) Home
     generation: markdown
   volume-1.md:
     title: 1:56 Sharing of IPS (sIPS)
@@ -83,10 +83,10 @@ pages:
     title: Test Plan
     generation: markdown
   other.md:
-    title: Changes to Other Documents
+    title: Changes to Other IHE Specifications
     generation: markdown
   issues.md:
-    title: Significant Changes & Issues
+    title: Significant Changes and Issues
     generation: markdown
   download.md:
     title: Download and Analysis
@@ -108,7 +108,7 @@ menu:
   Volume 3: content.html
   Artifacts: artifacts.html
   Other:
-    Test Plan: testplan.html
     Changes to Other IHE Specifications: other.html
     Download and Analysis: download.html
+    Test Plan: testplan.html
   PCC Excerpt: pcc.html
