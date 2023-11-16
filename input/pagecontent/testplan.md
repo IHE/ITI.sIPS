@@ -1,9 +1,9 @@
 <div markdown="1" class="stu-note">
 
-This Test Plan page is a prototype.   We expect the maturity of the content will improve over time.  For now, we summarize high level testing scope and available tools. Comments are welcome.
+This Test Plan page is a prototype. We expect the maturity of the content will improve over time.  For now, we summarize high level testing scope and available tools. Comments are welcome.
 </div>
 
-The Test Plan builds upon quality testing of Document Sharing, and IPS Content. This Test plan focuses on the intersection between IPS and the Document Sharing Implementation Guides.
+The Test Plan builds upon quality testing of Document Sharing, and IPS Content. This Test Plan focuses on the intersection between IPS and the Document Sharing Implementation Guides.
 
 ## Introduction
 
@@ -21,7 +21,7 @@ Then the interaction between Document Sharing and IPS shall follow the sIPS Impl
 
 ##### Content Creator
 
-When an IPS is created by a Content Creator, then it shall comply with the IPS specification and be tested with the IPS tests
+When an IPS is created by a Content Creator, then it shall comply with the IPS specification and be tested with the IPS tests.
 
 ##### Content Consumer
 
