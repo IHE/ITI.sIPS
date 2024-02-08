@@ -1,6 +1,8 @@
 == Suppressed Messages ==
 # instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
 
+# do not want to dependon, just want an informative link
+The link 'https://profiles.ihe.net/ITI/MHDS/index.html' for "Mobile Health Document Sharing (MHDS)" cannot be resolved
 
 # known 
-Reference to draft item http://hl7.org/fhir/document-reference-status|4.0.1
+Reference to draft CodeSystem http://hl7.org/fhir/document-reference-status|4.0.1
