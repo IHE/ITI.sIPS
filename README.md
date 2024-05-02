@@ -7,3 +7,5 @@ Formal Publication -- [https://profiles.ihe.net/ITI/sIPS](https://profiles.ihe.n
 ## CI Build
 
 [CI Build](http://build.fhir.org/ig/IHE/ITI.sIPS/branches/master/index.html)
+
+.
