@@ -78,6 +78,6 @@ Given the [IPS examples]({{site.data.fhir.hl7ips}}/examples.html) provided in th
 
 See example artifacts
 
-- [Example Bundle: IPS Bundle example]({{site.data.fhir.hl7ips}}/Bundle-IPS-examples-Bundle-01.html)
+- [Example Bundle: IPS Bundle example](https://hl7.org/fhir/uv/ips/STU1.1/Bundle-IPS-examples-Bundle-01.html)
   - [Example DocumentReference for IPS Bundle in XML encoding](DocumentReference-ex-DocumentReference-Bundle-01-xml.html)
   - [Example DocumentReference for IPS Bundle in JSON encoding](DocumentReference-ex-DocumentReference-Bundle-01-json.html) with transform relationship to XML encoding
