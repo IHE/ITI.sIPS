@@ -3,6 +3,6 @@ hide footbox
 agent "Content\nCreator" as Creator
 agent "Content\nConsumer" as Consumer
 cloud "Share Content" as cloud
-Creator -> cloud : IPS
-cloud -> Consumer : IPS
+Creator -> cloud : content
+cloud -> Consumer : content
 @enduml
