@@ -23,6 +23,12 @@ profiles may define other options as necessary.
 - **Role**: Consume document(s) that has been exchanged between two
   actors
 
+<figure>
+{%include docSharing.svg%}
+<figcaption><b>Figure PCC 2:3.1-1: Actor Diagram</b></figcaption>
+</figure>
+<br clear="all">
+
 Documents are created by a Content Creator and consumed by a Content
 Consumer.
 
@@ -237,7 +243,7 @@ Please note the specifics given in the table below.
 
 ### 4.1.1 XDSDocumentEntry Metadata
 
-<table>
+<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
 <colgroup>
 <col style="width: 23%" />
 <col style="width: 17%" />
