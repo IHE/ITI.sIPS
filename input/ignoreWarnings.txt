@@ -6,3 +6,12 @@ The link 'https://profiles.ihe.net/ITI/MHDS/index.html' for "Mobile Health Docum
 
 # known 
 Reference to draft CodeSystem http://hl7.org/fhir/document-reference-status|4.0.1
+
+# these come to us from the IPS example
+WARNING: DocumentReference/ex-DocumentReference-Bundle-01-json: DocumentReference.masterIdentifier.system: No definition could be found for URL value 'urn:oid:2.16.724.4.8.10.200.10'
+WARNING: DocumentReference/ex-DocumentReference-Bundle-01-json: DocumentReference.relatesTo[0].target.identifier.system: No definition could be found for URL value 'urn:oid:2.16.724.4.8.10.200.10'
+WARNING: DocumentReference/ex-DocumentReference-Bundle-01-xml: DocumentReference.masterIdentifier.system: No definition could be found for URL value 'urn:oid:2.16.724.4.8.10.200.10'
+WARNING: DocumentReference/ex-DocumentReference-Bundle-01-xml: DocumentReference.relatesTo[0].target.identifier.system: No definition could be found for URL value 'urn:oid:2.16.724.4.8.10.200.10'
+WARNING: Organization/890751f4-2924-4636-bab7-efffc7f3cf15: Organization.identifier[0].system: No definition could be found for URL value 'urn:oid:2.16.528.1.1007.3.3'
+WARNING: Practitioner/1c616b24-3895-48c4-9a02-9a64110351ef: Practitioner.identifier[0].system: No definition could be found for URL value 'urn:oid:2.16.528.1.1007.3.1'
+
