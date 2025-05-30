@@ -96,8 +96,7 @@ Usage: #example
 * content.attachment.title = "Patient Summary as of December 11, 2017 14:30"
 * context.event = http://terminology.hl7.org/CodeSystem/v3-ActClass#PCPR
 * context.period.end = 2017-12-11T14:30:00+01:00
-* content.format.system = "urn:ietf:rfc:3986"
-* content.format.code = #http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
+* content.format = urn:ietf:rfc:3986#http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
 * content.attachment.creation = 2017-12-11T14:30:00+01:00
 // note the size and hash are NOT included at all
 * content.attachment.language = urn:ietf:bcp:47#en
